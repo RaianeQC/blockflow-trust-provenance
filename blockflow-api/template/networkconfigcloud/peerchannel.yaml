@@ -1,0 +1,7 @@
+
+
+      peernumber.orgname.com:
+              endorsingPeer: true
+              chaincodeQuery: true
+              ledgerQuery: true
+              eventSource: true

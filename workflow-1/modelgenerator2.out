@@ -1,0 +1,28 @@
+
+****Welcome to ModelGenerator v0.85****
+
+If you use ModelGenerator in your analysis, please cite:
+
+Thomas M Keane, Christopher J Creevey , Melissa M Pentony, Thomas J Naughton and James O McInerney (2006) Assessment of methods for amino acid matrix selection and their use on empirical data shows that ad hoc assumptions for choice of matrix are not justified, BMC Evolutionary Biology, 6:29
+
+http://www.biomedcentral.com/1471-2148/6/29
+
+Enter alignment file name: 
+Enter number of discrete gamma categories: 
+Input sequence file: /home/raiane/Documentos/sars-cov/Genomes/sequences_align.fas
+Format is FASTA
+Datatype is NUCLEOTIDE
+Building initial NJ tree......
+Created models
+Starting to optimise model parameters.....
+Number of observed invariant sites: 15488
+Optimising model 1 of 56: JC
+Optimising model 2 of 56: JC+G
+Optimising model 3 of 56: JC+I
+Optimising model 4 of 56: JC+I+G
+Optimising model 5 of 56: F81
+Optimising model 6 of 56: F81+G
+Optimising model 7 of 56: F81+I
+Optimising model 8 of 56: F81+I+G
+Optimising model 9 of 56: HKY
+Optimising model 10 of 56: HKY+G

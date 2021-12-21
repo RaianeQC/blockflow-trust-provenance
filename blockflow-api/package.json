@@ -1,0 +1,45 @@
+{
+  "name": "balance-transfer",
+  "version": "1.0.0",
+  "description": "A balance-transfer example node program to demonstrate using node.js SDK APIs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "fabric-client sample app",
+    "balance-transfer node sample",
+    "v1.0 fabric nodesdk sample"
+  ],
+  "engines": {
+    "node": ">=8.12.4 ",
+    "npm": ">=6.4.1 "
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "express-bearer-token": "^2.1.0",
+    "express-jwt": "^5.1.0",
+    "express-session": "^1.15.2",
+    "fabric-ca-client": "^1.4.4",
+    "fabric-client": "^1.4.4",
+    "fabric-network": "^1.4.4",
+    "fs-extra": "^2.1.2",
+    "grpc": "^1.24.1",
+    "js-yaml": "^3.13.1",
+    "jsonwebtoken": "^7.3.0",
+    "log4js": "^0.6.38",
+    "mongoose": "^5.5.14",
+    "multer": "^1.4.2",
+    "replace-in-file": "^4.1.0",
+    "replaceall": "^0.1.6",
+    "shelljs": "^0.8.3",
+    "ssh2": "^0.8.9",
+    "yaml": "^1.6.0",
+    "zip-a-folder": "0.0.12"
+  }
+}

@@ -1,0 +1,36 @@
+    
+    
+    peernumber.orgname.com:
+        container_name: peernumber.orgname.com
+        extends:
+          file:   base.yaml
+          service: peer-base
+        dns_search: .
+        environment:   
+          - GODEBUG=netdns=go      
+          - CORE_PEER_ID=peernumber.orgname.com
+          - CORE_PEER_LOCALMSPID=orgnameMSP
+          - CORE_PEER_ADDRESS=peernumber.orgname.com:7051
+          - CORE_PEER_GOSSIP_BOOTSTRAP=peernumber.orgname.com:7051     
+          - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peernumber.orgname.com:7051
+          - CORE_PEER_LISTENADDRESS=0.0.0.0:7051
+          
+          
+          
+          - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbname:portcouch
+          # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
+          # provide the credentials for ledger to connect to CouchDB.  The username and password must
+          # match the username and password set for the associated CouchDB.
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+        ports:
+          - portnumber:7051
+          - portpeer2:7053
+        volumes:
+          - ./crypto-config/peerOrganizations/orgname.com/peers/peernumber.orgname.com/:/etc/hyperledger/crypto/peer          
+        depends_on:
+          - orderer.example.com
+          - couchdbname
+        networks:
+          - networkname

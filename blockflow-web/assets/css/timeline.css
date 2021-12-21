@@ -1,0 +1,102 @@
+.main-timeline{ overflow: auto; }
+.main-timeline .timeline{
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.main-timeline .timeline-icon{
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 65px;
+    color: #660066;
+    border-bottom: 3px solid #ccc;
+    position: relative;
+}
+.main-timeline .timeline-icon:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #660066;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -9.5px;
+    left: 0;
+    right: 0;
+}
+.main-timeline .year{
+    display: block;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background: #727cb6;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 1;
+    position: relative;
+}
+.main-timeline .year:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: -37px;
+}
+.main-timeline .timeline-content{ padding: 0 10px; }
+.main-timeline .post{
+    font-size: 20px;
+    color: #727cb6;
+    margin: 0 0 20px 0;
+}
+.main-timeline .description{
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+.main-timeline .timeline:nth-child(2n) .timeline-icon,
+.main-timeline .timeline:nth-child(2n) .post{
+    color: #660066;
+}
+.main-timeline .timeline:nth-child(2n) .year,
+.main-timeline .timeline:nth-child(2n) .timeline-icon:before{
+    background: #660066;
+}
+.main-timeline .timeline:nth-child(3n) .timeline-icon,
+.main-timeline .timeline:nth-child(3n) .post{
+    color: #660066;
+}
+.main-timeline .timeline:nth-child(3n) .year,
+.main-timeline .timeline:nth-child(3n) .timeline-icon:before{
+    background: #660066;
+}
+.main-timeline .timeline:nth-child(4n) .timeline-icon,
+.main-timeline .timeline:nth-child(4n) .post{
+    color: #660066;
+}
+.main-timeline .timeline:nth-child(4n) .year,
+.main-timeline .timeline:nth-child(4n) .timeline-icon:before{
+    background: #660066;
+}
+.main-timeline .timeline:nth-child(5n) .timeline-icon,
+.main-timeline .timeline:nth-child(5n) .post{
+    color: #660066;
+}
+.main-timeline .timeline:nth-child(5n) .year,
+.main-timeline .timeline:nth-child(5n) .timeline-icon:before{
+    background: #660066;
+}
+.main-timeline .timeline:nth-child(6n) .timeline-icon,
+.main-timeline .timeline:nth-child(6n) .post{
+    color: #660066;
+}
+.main-timeline .timeline:nth-child(6n) .year,
+.main-timeline .timeline:nth-child(6n) .timeline-icon:before{
+    background: #660066;
+}

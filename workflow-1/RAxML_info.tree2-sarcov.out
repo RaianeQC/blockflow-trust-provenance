@@ -1,0 +1,90 @@
+
+You are using a proportion of Invariable sites estimate, although I don't
+like it. The likelihood epsilon "-f e" will be automatically lowered to 0.001
+to avoid unfavorable effects caused by simultaneous optimization of alpha and P-Invar
+IMPORTANT WARNING: Alignment column 28321 contains only undetermined values which will be treated as missing data
+
+IMPORTANT WARNING
+Found 1 column that contains only undetermined values which will be treated as missing data.
+Normally these columns should be excluded from the analysis.
+
+An alignment file with undetermined columns removed has already
+been printed to file sequences_align.fas.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+Alignment has 1 completely undetermined sites that will be automatically removed from the input data
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 5980 distinct alignment patterns
+
+Found 0 invariant alignment patterns that correspond to 0 columns 
+Proportion of gaps and completely undetermined characters in this alignment: 11.93%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+ML estimate of 25 per site rate categories
+
+Likelihood of final tree will be evaluated and optimized under GAMMA+P-Invar
+
+GAMMA+P-Invar Model parameters will be estimated up to an accuracy of 0.0010000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 5980
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC -m GTRCATI -p 200 -s sequences_align.fas -n tree2-sarcov.out 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.294 0.188 0.199 0.319 
+
+Inference[0]: Time 17.027626 CAT-based likelihood -130054.341231, best rearrangement setting 5
+alpha[0]: 1.000000 invar[0]: 0.479800 rates[0] ac ag at cg ct gt: 1.270253 5.165515 2.245227 0.791472 8.167801 1.000000 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -154316.315768 tree written to file /home/raiane/Documentos/sars-cov/Genomes/RAxML_result.tree2-sarcov.out
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -154316.315768 .... 
+
+Final GAMMA-based Score of best tree -154315.094105
+
+Program execution info written to /home/raiane/Documentos/sars-cov/Genomes/RAxML_info.tree2-sarcov.out
+Best-scoring ML tree written to: /home/raiane/Documentos/sars-cov/Genomes/RAxML_bestTree.tree2-sarcov.out
+
+Overall execution time: 64.033103 secs or 0.017787 hours or 0.000741 days
+

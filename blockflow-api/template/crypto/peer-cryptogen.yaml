@@ -1,0 +1,11 @@
+ 
+  - Name: orgname
+    Domain: orgname.com
+    CA:
+       Hostname: ca.orgname.com  
+    Template:
+      Count: countpeer
+    SANS:
+        - "localhost"
+    Users:
+      Count: 1

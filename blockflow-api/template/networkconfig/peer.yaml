@@ -1,0 +1,9 @@
+  
+  peernumber.orgname.com:
+    # this URL is used to send endorsement and query requests
+    url: grpcs://localhost:portpeer
+
+    grpcOptions:
+      ssl-target-name-override:  peernumber.orgname.com
+    tlsCACerts:
+      path: ./crypto-config/peerOrganizations/orgname.com/peers/peernumber.orgname.com/tls/ca.crt

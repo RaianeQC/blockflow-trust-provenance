@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Add Research in Network</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+         
+        </form>
+      </nav>
+      <div class="main-sidebar">
+          <div class="sidebar-brand">
+              <a href="index.html">Blockflow</a>
+            </div>
+            <div class="sidebar-brand sidebar-brand-sm">
+              <a href="index.html">Bf</a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-header">Network</li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Networks</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="pre-create-network.html">Create Networks</a></li>
+                    <li><a class="nav-link" href="networks-experiment-for-join.html">Networks for Join</a></li>
+                    <li><a class="nav-link" href="index-0.html">View/Get Provenance</a></li>
+                 
+                  </ul>
+                </li>
+               
+                
+                
+          </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+            <div class="section-header">
+              <h1>Network Experiment Created</h1>
+                
+              </div>
+          <div class="section-body">
+
+              <h2 class="section-title">Add researchers to the experiment</h2>
+
+
+            <div class="row mt-4">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-header-action">
+                          <h4>All Researchers</h4>
+                       
+                      </div>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="table-responsive">
+                        <table class="table table-striped" id="sortable-table">
+                          <thead>
+                            <tr>
+                              <th class="text-center">
+                                <i class="fas fa-th"></i>
+                              </th>
+                             
+                             
+                              <th>Peer</th>
+                              <th>Organization</th>
+                              <th>Add research</th>
+                              <th>Research</th>
+                            </tr>
+                          </thead>
+                          <tbody class="ui-sortable">
+                         
+
+
+                            <!--<tr>
+                                <td>
+                                  <div class="sort-handler ui-sortable-handle">
+                                    <i class="fas fa-th"></i>
+                                  </div>
+                                </td>
+                                <td><span  class="text-primary">Raiane</span></td>
+                                <td><span  class="text-primary">UFJF</span></td>
+                                <td><span  class="text-primary">UFJF</span></td>
+                                <td><a href="#" class="btn btn-icon btn-primary"><i class="fas fa-times"></i></a></td>
+                              </tr>-->
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="card-footer text-right">
+                        <button id="finished" class="btn btn-primary">Next</button>
+                      </div>
+
+
+                     
+                    </div>
+
+
+
+                     
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add researcher</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+
+                              <input  id="peerOrg" type="text" class="form-control" disabled>
+
+                            <select class="form-control" id="researchers">
+                              
+                            </select>
+                          </div>
+                          <div class="modal-footer">
+                            <button type='button' id="addResearch" class='btn btn-primary'>Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/modules-datatables.js"></script>
+
+
+  <script>
+      $(document).ready(function(){
+
+
+        var url = window.location.href;
+
+        var n = url.search("=");
+
+        var idNetwork = url.substring(n+1);
+
+        $.ajax({ 
+              url: "http://localhost:5000/api/network/listPeerForAddNetwork/"+idNetwork,
+              method: 'GET',
+              success: function( peers ) {
+
+               
+
+                $.map(peers  , function( obj, i ) { 
+
+                  $('#sortable-table').append("<tr><td><div class='sort-handler ui-sortable-handle'><i class='fas fa-th'></i></div></td>"                     
+                          +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+                          +"<td><span  class='text-primary' id='org"+i+"'>"+obj.organization.organizationName+"</span></td>"
+                          +"<td><span  class='text-primary' id='"+i+"'></span></td>"
+                          +"<td><button type='button' class='btn btn-primary' id='"+i+"' onclick='research(this.id)'  data-toggle='modal' data-target='#exampleModalCenter'>Add</button></td>"
+
+                        +"</tr>");
+                   
+                  
+                }); 
+             }
+        });
+
+
+
+        $('#addResearch').click(function(){
+            event.preventDefault();
+            var userId =  $("#researchers option:selected" ).val();
+
+            var peerOrg = $('#peerOrg').val();
+
+
+
+            $.ajax({ 
+              url: "http://localhost:5000/api/network/addPeerUserNetwork?networkid="+idNetwork+"&peerOrg="+peerOrg+"&peerUserOrgId="+userId,
+              method: 'GET',
+              success: function( peers ) {
+
+               
+
+               
+             }
+        });
+
+        });
+
+
+        $('#finished').click(function(){  
+
+          event.preventDefault();
+          var url  = window.location.href; 
+
+          var redirect = url.substring(0, url.lastIndexOf('/'))
+
+          window.location = redirect + 'success-create-network.html';
+
+
+
+        });
+        
+
+
+
+       /* $.ajax({ 
+              url: "http://localhost:5000/api/user/users",
+              method: 'GET',
+              success: function( users ) {
+
+                $.map(users  , function( obj, i ) { 
+
+                  $('#researchers').append('<option value="'+obj.peer+'" selected="selected">'+obj.name+'</option>');
+                   
+                  
+                }); 
+             }
+        });
+
+
+         $("#addUser").click(function(){
+
+          var idResearchers = $( "#researchers" ).val(); 
+
+          var idResearcherss =  $("#researchers option:selected" ).text();
+
+          $('#sortable-table').find('tbody:last')
+                  .append("<tr><td><div class='sort-handler ui-sortable-handle'><i class='fas fa-th'></i></div></td>"                     
+                          +"<td><span  class='text-primary'>"+idResearcherss+"</span></td>"
+                          +"<td><span  class='text-primary' id='peercolumn'>"+idResearchers+"</span></td>"
+                          +"<td><a href='#' class='btn btn-icon btn-primary'><i class='fas fa-times'></i></a></td>"
+                        +"</tr>");
+   
+          
+         });
+
+         $("#addPeerChannel").click(function(){
+
+          var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMTI0ZWFlYmZlMjFlMzNhYzMxMjZmMyIsInVzZXJuYW1lIjoicmFpYW5lYmxvY2tmbG93Iiwib3JnYW5pemF0aW9uIjoiT3JnMSIsImlhdCI6MTU2MTU1MzE5NiwiZXhwIjoxNTYxNjM5NTk2fQ.XjQoHPKugznx9g6MS5jb3LpM8LHsUJdkYGNG4AK5qPs';
+        
+        
+
+         $.ajax({ 
+            url: "http://localhost:5000/api/addUserExperiment/add",          
+            method: 'POST',            
+            headers: {
+                // Use access_token previously retrieved from inContact token 
+                // service.
+                'Authorization': 'Bearer ' + token, 
+
+                
+
+              },
+            success: function( result ) {
+           
+            }
+          });
+ 
+        });*/
+
+         
+   });
+
+   function research(i){
+      var org = 'org'+i;
+
+      var peer = 'peer'+i;
+
+      var orgname = $('#'+org).text();
+
+
+      var peerOrg = $('#'+peer).text();
+
+
+      $('#peerOrg').val(peerOrg);
+
+
+      $("#researchers").empty();
+
+      $.ajax({ 
+              url: "http://localhost:5000/api/network/listPeerUserNetwork/"+orgname,
+              method: 'GET',
+              success: function( users ) {
+
+                $.map(users  , function( obj, i ) { 
+
+                $('#researchers').append('<option value="'+obj._id+'" selected="selected">'+obj.name+'</option>');
+                
+
+                }); 
+
+             }
+        });
+
+     
+
+   }
+     </script>
+
+<script src="../assets/js/page/bootstrap-modal.js"></script>
+</body>
+</html>

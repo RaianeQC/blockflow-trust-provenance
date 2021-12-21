@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Forms &rsaquo; Form Validation &mdash; Stisla</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          
+        </form>
+        <ul class="navbar-nav navbar-right">
+         
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+             
+              
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+          <div class="sidebar-brand">
+              <a href="index.html">Blockflow</a>
+            </div>
+            <div class="sidebar-brand sidebar-brand-sm">
+              <a href="index.html">Bf</a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-header">Network</li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Networks</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="pre-create-network.html">Create Networks</a></li>
+                    <li><a class="nav-link" href="networks-experiment-for-join.html">Networks for Join</a></li>
+                    <li><a class="nav-link" href="index-0.html">View/Get Provenance</a></li>
+                 
+                  </ul>
+                </li>
+               
+                
+                
+          </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Network Experiment Created</h1>
+            
+          </div>
+
+          <div class="section-body">
+
+            
+            <div class="row">
+                <div class="col-12 col-md-2 col-lg-2">
+                </div>
+                   
+              <div class="col-12 col-md-8 col-lg-8">
+                <div class="card">
+                  <form>
+                    <div class="card-header">
+                      <h4>Network Experiment</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="section-title">Network</div>
+
+                      <div class="form-group">
+
+                          <div class="row">
+                              <div class="col-2">
+                                  <img alt="image" src="../assets/img/avatar/blockchain_network.png" width='80' class="author-box-picture">
+                              </div>
+ 
+                           
+                            <div class="col-10">
+                               <div class="form-group">
+                        <label>Name Network Experiment</label>
+                        <input name="nameNetworkExperiment" id="nameNetworkExperiment" type="text" class="form-control" disabled >
+                      </div>
+                    </div>
+                  </div>
+                      </div>                      
+                  
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea id="description" name="description" class="form-control" disabled></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dir Network</label>
+                        <textarea id="dirnetwork" name="dirnetwork" class="form-control" disabled></textarea>
+                      
+                      </div> 
+                      
+                      <div class="form-group">
+                        <button id="startnetwork"  class="btn btn-primary">Start Network</button>
+                        <button id="stopnetwork" class="btn btn-primary">Stop Network</button>
+                      </div> 
+
+                      <div class="section-title">Create Channel Configuration</div>
+
+                      <div class="form-group">
+
+                          <label>Channel Name</label>
+                          <input name="channelName" id="channelName" type="text" class="form-control" disabled>
+                        </div> 
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img alt="image" src="../assets/img/avatar/channel_network.png" width='70' class="author-box-picture">
+                                </div>
+
+                             
+                              <div class="col-10">
+                              <div class="form-group">
+                            <label>Config Channel Path</label>
+                            <input name="channelConfigPath" id="channelConfigPath" type="text" class="form-control" disabled>
+                          </div> 
+                        </div> 
+                      </div> 
+
+                        <div class="form-group">
+                              <button id="createchannel" class="btn btn-primary">Create Channel Configuration</button>
+                              
+                        </div> 
+
+
+                       
+                  </form>
+
+                  <div class="card-footer text-right">
+                    <button id="next" class="btn btn-primary">Next</button>
+                  </div>
+                </div>
+           
+              </div>
+            
+                  
+               
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
+        </div>
+        <div class="footer-right">
+          2.3.0
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+</body>
+
+<script>
+  $(document).ready(function(){
+
+  var url = window.location.href;
+
+  var n = url.search("=");
+
+  var idNetwork = url.substring(n+1);
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/details/"+idNetwork,
+          method: 'GET',
+          success: function( network ) {
+
+              $('#nameNetworkExperiment').val(network.networkname);
+              $('#description').val(network.description);
+              $('#dirnetwork').val(network.dirnetwork);
+              $('#channelName').val(network.channels.channelName);
+              $('#channelConfigPath').val(network.channels.channelConfigPath);
+              
+              
+           
+         }
+    });
+
+    $('#startnetwork').click(function(event){
+      event.preventDefault();
+
+      var dirnetwork = $('#dirnetwork').val();
+      
+      $.ajax({ 
+          url: "http://localhost:5000/api/network/startnetwork?dir="+dirnetwork,
+          method: 'POST',
+          success: function( network ) {
+
+             
+              
+              
+           
+         }
+      });
+    });
+
+    $('#createchannel').click(function(event){
+      event.preventDefault();
+        var dirnetwork = $('#dirnetwork').val();
+        var channelName = $('#channelName').val();
+        var channelConfigPath = $('#channelConfigPath').val();
+      
+      $.ajax({ 
+          url: "http://localhost:5000/api/channel/createchannel?dir="+dirnetwork+"&channelName="+channelName+"&channelConfigPath="+channelConfigPath,
+          method: 'POST',
+          success: function( network ) {
+
+         }
+      });
+      
+      
+    });
+
+    $("#next").click(function(){
+
+      event.preventDefault();
+      
+            var url  = window.location.href; 
+
+            var redirect = url.substring(0, url.lastIndexOf('/'))
+
+            window.location = redirect + 'add-research-experiment.html?networkid='+idNetwork;
+
+    });
+
+
+    
+
+    
+  });
+
+  </script>
+</html>

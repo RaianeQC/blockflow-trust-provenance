@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Get Provenance</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/timeline.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+           
+          </ul>
+       
+        </form>
+      </nav>
+      <div class="main-sidebar">
+          <div class="sidebar-brand">
+              <a href="index.html">Blockflow</a>
+            </div>
+            <div class="sidebar-brand sidebar-brand-sm">
+              <a href="index.html">Bf</a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-header">Network</li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Networks</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="pre-create-network.html">Create Networks</a></li>
+                    <li><a class="nav-link" href="networks-experiment-for-join.html">Networks for Join</a></li>
+                    <li><a class="nav-link" href="index-0.html">View/Get Provenance</a></li>
+                 
+                  </ul>
+                </li>
+               
+                
+                
+          </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+
+            <div class="section-header">
+                
+                <h1>Trust Provenance</h1>
+                
+              </div>
+            <!-- <div class="row">
+           <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="card card-secondary card-statistic-2">
+                  <div class="card-stats">
+                    <div class="card-stats-title">
+                      
+                    </div>
+                    <div class="card-stats-items">
+                        <div class="card-icon shadow-primary bg-primary">
+                            <i class="fas fa-cubes"></i>
+                          </div>
+
+                          <div class="card-body">
+                              <h4> Provenance </h4>
+                            </div>
+                    </div>
+                  </div>
+                  <div class="card-icon">
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>-->
+          <div class="section-body">
+
+                  
+                      <div class="card mb-0 ">
+                          <div class="card-body">
+                              <div class="row">
+                              
+                                  <div class="form-group col-lg-4">
+                                      <label>Link API REST for get provenance in Workflow</label>
+                                      <input name="channelConfigPath" id="channelConfigPath" type="text" value="http://localhost:5000/wrapper/:inputvalue/:outputvalue/:taskname" class="form-control" disabled>
+                                  </div>
+    
+                                    <div class="form-group col-lg-3">
+                                        <label>Name network</label>
+                                        <input name="channelConfigPath" id="channelConfigPath" value="ExperimentationH1N1" type="text" class="form-control" disabled>
+                                      </div>
+    
+                                      <div class="form-group col-lg-4">
+                                          <label>Token</label>
+                                          <input name="channelConfigPath" id="channelConfigPath" value="$2a$10$8D7WZB62PnMdzHQbdADEbuLK1HRRX6.bjEKNSnfGytSFbQAoGvXR." type="text" class="form-control" disabled>
+                                        </div>
+                
+                                      </div>
+                        </div>
+                      </div>
+      
+                     
+                     
+                  
+                 <!-- <div class="card card-secondary card-statistic-2 col-6" >
+                    
+                      <div class="card-header">
+                       
+                      </div>
+                      <div class="card-body">
+
+                          <div class="empty-state" >
+                              
+                              <h2 class="mt-0">Provenance</h2>
+                              <p class="lead">
+                                Capture provenance in model provONE  
+                              </p>
+                              
+                              <div class="form-group">
+                                  <label>Link API REST for get provenance in Workflow</label>
+                                  <input name="channelConfigPath" id="channelConfigPath" type="text" value="http://localhost:5000/wrapper/:inputvalue/:outputvalue/:taskname" class="form-control" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Name network</label>
+                                    <input name="channelConfigPath" id="channelConfigPath" value="Experimentation H1N1" type="text" class="form-control" disabled>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label>Token Login</label>
+                                      <input name="channelConfigPath" id="channelConfigPath" type="text" class="form-control" disabled>
+                                    </div>
+            
+                              
+                            </div>
+  
+                    
+                      </div>
+                    
+                  </div>-->
+
+                
+
+              
+                  
+              
+                    <div class="card card-secondary card-statistic-2">
+                    <form>
+                      <div class="card-header">
+                        
+                      </div>
+                      <div class="card-body">
+              
+                  <div class="main-timeline">
+                     
+                      <div class="row">
+
+                       
+                      <div class="col-lg-3 col-md-3 col-sm-12  timeline">
+                        
+                          <div class="timeline-icon"><figure class="avatar mr-3 ">
+                              <img src="../assets/img/avatar/iconfinder_afro_woman_female_person_4043231.png" alt="...">
+                            </figure></div>
+                          
+
+                            
+                          <div class="timeline-content">
+
+                             
+                              <div class="card card-secondary card-statistic-2">
+                                   
+                                  <div class="card-icon shadow-primary bg-primary">
+                                      <i class="far fa-file-alt"></i>
+                                  </div>
+                                  <div class="card-wrap">
+                                    <div class="card-header">
+                                     
+                                    </div>
+                                    <div class="card-body">
+                                     
+                                    </div>
+                                  </div>
+                                </div>
+
+                                
+
+
+                                <div class="card card-secondary card-statistic-2">
+                                   
+                                    <div class="card-icon shadow-primary bg-primary">
+                                        <i class="far fa-file-alt"></i>
+                                    </div>
+                                    <div class="card-wrap">
+                                      <div class="card-header">
+                                       
+                                      </div>
+                                      <div class="card-body">
+                                       
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="card card-secondary card-statistic-2">
+                                   
+                                      <div class="card-icon shadow-primary bg-primary">
+                                          <i class="far fa-file-alt"></i>
+                                      </div>
+                                      <div class="card-wrap">
+                                        <div class="card-header">
+                                         
+                                        </div>
+                                        <div class="card-body">
+                                         
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!--<a href="#" class="btn btn-primary"> Trace</a>-->
+                          </div>
+                      </div>
+           
+                      <div class="col-lg-3 col-md-3 col-sm-12  timeline">
+                          <div class="timeline-icon"><figure class="avatar mr-3 ">
+                              <img src="../assets/img/avatar/iconfinder_geisha_japanese_woman_avatar_4043249.png" alt="...">
+                            </figure></div>
+                         
+                          <div class="timeline-content">
+                    
+                                  <div class="card card-secondary card-statistic-2">
+                                   
+                                    <div class="card-icon shadow-primary bg-primary">
+                                        <i class="far fa-file-alt"></i>
+                                    </div>
+                                    <div class="card-wrap">
+                                      <div class="card-header">
+                                       
+                                      </div>
+                                      <div class="card-body">
+                                       
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!--<a href="#" class="btn btn-primary"> Trace </a>-->
+                                
+                          </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-3 col-sm-12 timeline">
+                          <div class="timeline-icon"><figure class="avatar mr-3 ">
+                              <img src="../assets/img/avatar/iconfinder_indian_woman_hindi_avatar_4043259.png" alt="...">
+                            </figure></div>
+                        
+                          <div class="timeline-content">
+                              <div class="card card-secondary card-statistic-2">
+                                   
+                                  <div class="card-icon shadow-primary bg-primary">
+                                      <i class="far fa-file-alt"></i>
+                                  </div>
+                                  <div class="card-wrap">
+                                    <div class="card-header">
+                                        <h4>getWorkflow_Reader</h4>   
+                                    </div>
+                                    <div class="card-body">
+                                     
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+
+                          <!--<a href="#" class="btn btn-primary"> Trace </a>-->
+                      </div>
+
+                      <div class="col-lg-3 col-md-3 col-sm-12 timeline">
+                          <div class="timeline-icon"><figure class="avatar mr-3 ">
+                              <img src="../assets/img/avatar/iconfinder_marilyn_monroe_artist_avatar_4043261.png" alt="...">
+                            </figure></div>
+                        
+                          <div class="timeline-content">
+                              <div class="card card-secondary card-statistic-2">
+                                   
+                                  <div class="card-icon shadow-primary bg-primary">
+                                      <i class="far fa-file-alt"></i>
+
+                                      
+                                  </div>
+                                  <div class="card-wrap">
+                                    <div class="card-header">                                        
+                                                <h4>Read CSV</h4>                                          
+                
+                                    </div>
+                                     
+                                    </div>
+                                    <div class="card-body">
+                                     
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="card card-secondary card-statistic-2">
+                                   
+                                    <div class="card-icon shadow-primary bg-primary">
+                                        <i class="far fa-file-alt"></i>
+                                    </div>
+                                    <div class="card-wrap">
+                                      <div class="card-header">
+                                          <h4>getWorkflow_Writer</h4>   
+                                      </div>
+                                      <div class="card-body">
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!--<a href="#" class="btn btn-primary">Trace</a>-->
+                          </div>
+                      </div>
+                  </div>
+              </div> <div class="row">
+
+                  <div class="col">
+
+              </div>
+
+             
+
+
+              </div>
+
+              <div class="card-footer text-center">
+                  <button id="next" class="btn btn-primary">View all provenance</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+             
+          </div>
+                 
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+</body>
+<script>
+$(document).ready(function(){
+
+    $('#next').click(function(event){
+      event.preventDefault();
+
+      var url  = window.location.href; 
+
+      var redirect = url.substring(0, url.lastIndexOf('/'))
+
+      window.location = redirect + 'all-provenance-experiments.html';
+
+    
+      
+    
+    });
+  });
+</script>
+</html>

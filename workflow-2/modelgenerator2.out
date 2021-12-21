@@ -1,0 +1,361 @@
+
+****Welcome to ModelGenerator v0.85****
+
+If you use ModelGenerator in your analysis, please cite:
+
+Thomas M Keane, Christopher J Creevey , Melissa M Pentony, Thomas J Naughton and James O McInerney (2006) Assessment of methods for amino acid matrix selection and their use on empirical data shows that ad hoc assumptions for choice of matrix are not justified, BMC Evolutionary Biology, 6:29
+
+http://www.biomedcentral.com/1471-2148/6/29
+
+Enter alignment file name: 
+Enter number of discrete gamma categories: 
+Input sequence file: /home/raiane/Documentos/sars-cov/corona/Trabalho/sequencias_align.fasta
+Format is FASTA
+Datatype is NUCLEOTIDE
+Building initial NJ tree......
+Created models
+Starting to optimise model parameters.....
+Number of observed invariant sites: 11122
+Optimising model 1 of 56: JC
+Optimising model 2 of 56: JC+G
+Optimising model 3 of 56: JC+I
+Optimising model 4 of 56: JC+I+G
+Optimising model 5 of 56: F81
+Optimising model 6 of 56: F81+G
+Optimising model 7 of 56: F81+I
+Optimising model 8 of 56: F81+I+G
+Optimising model 9 of 56: HKY
+Optimising model 10 of 56: HKY+G
+Optimising model 11 of 56: HKY+I
+Optimising model 12 of 56: HKY+I+G
+Optimising model 13 of 56: K80
+Optimising model 14 of 56: K80+G
+Optimising model 15 of 56: K80+I
+Optimising model 16 of 56: K80+I+G
+Optimising model 17 of 56: SYM
+Optimising model 18 of 56: SYM+G
+Optimising model 19 of 56: SYM+I
+Optimising model 20 of 56: SYM+I+G
+Optimising model 21 of 56: GTR
+Optimising model 22 of 56: GTR+G
+Optimising model 23 of 56: GTR+I
+Optimising model 24 of 56: GTR+I+G
+Optimising model 25 of 56: TrN
+Optimising model 26 of 56: TrN+G
+Optimising model 27 of 56: TrN+I
+Optimising model 28 of 56: TrN+I+G
+Optimising model 29 of 56: TrNef
+Optimising model 30 of 56: TrNef+G
+Optimising model 31 of 56: TrNef+I
+Optimising model 32 of 56: TrNef+I+G
+Optimising model 33 of 56: TVM
+Optimising model 34 of 56: TVM+G
+Optimising model 35 of 56: TVM+I
+Optimising model 36 of 56: TVM+I+G
+Optimising model 37 of 56: TVMef
+Optimising model 38 of 56: TVMef+G
+Optimising model 39 of 56: TVMef+I
+Optimising model 40 of 56: TVMef+I+G
+Optimising model 41 of 56: TIM
+Optimising model 42 of 56: TIM+G
+Optimising model 43 of 56: TIM+I
+Optimising model 44 of 56: TIM+I+G
+Optimising model 45 of 56: TIMef
+Optimising model 46 of 56: TIMef+G
+Optimising model 47 of 56: TIMef+I
+Optimising model 48 of 56: TIMef+I+G
+Optimising model 49 of 56: K81uf
+Optimising model 50 of 56: K81uf+G
+Optimising model 51 of 56: K81uf+I
+Optimising model 52 of 56: K81uf+I+G
+Optimising model 53 of 56: K81
+Optimising model 54 of 56: K81+G
+Optimising model 55 of 56: K81+I
+Optimising model 56 of 56: K81+I+G
+
+		Uniform			G			I			I+G
+JC		-479986.4741687883	-479986.4741687883	-471838.51660888974	-471838.5302252038	
+F81		-477729.52909023134	-477729.5371401432	-469377.7134176577	-469377.7265546949	
+HKY		-470010.1880191996	-470010.2459483421	-461218.32861124724	-461218.3336592431	
+K80		-473472.9008842813	-473472.9008842813	-464958.4794730884	-464958.34653017734	
+SYM		-471237.3341680017	-471236.9986598624	-462747.09869703825	-462746.92347948434	
+GTR		-468945.90841390454	-468945.3814423376	-460261.37547008647	-460261.3138272111	
+TrN		-469733.0440946995	-469733.1141150737	-460957.01111301023	-460957.01556329307	
+TrNef		-473285.415410016	-473285.415410016	-464759.85750762746	-464759.870326077	
+TVM		-469217.305181603	-469217.0915669901	-460514.51483666786	-460514.5205312338	
+TVMef		-471396.6878208064	-471396.6878208064	-462923.7506278719	-462923.7496603605	
+TIM		-469596.1379191945	-469596.14633582527	-460809.74860269926	-460809.7213232042	
+TIMef		-472855.4281161994	-472855.4281161994	-464307.25546434295	-464307.25581517664	
+K81uf		-469868.7462226026	-469868.76280584105	-461067.94450144906	-461067.863961817	
+K81		-473039.5010749064	-473039.5010749064	-464500.9235428475	-464500.92354840547	
+
+****Hierarchical Likelihood Ratio Tests (hLRTs)****
+
+Equal base frequencies
+	Null model = JC
+	Alternative model = F81
+	2(lnL1-lnL0) = 4513.8901571138995	df = 3
+Using Chi-Squared Test
+	P-value < .0001
+
+Ti=Tv
+	Null model = F81
+	Alternative model = HKY
+	2(lnL1-lnL0) = 15438.68214206351	df = 1
+Using Chi-Squared Test
+	P-value < .0001
+
+1 or 2 transition rates
+	Null model = HKY
+	Alternative model = TrN
+	2(lnL1-lnL0) = 554.2878490001895	df = 1
+Using Chi-Squared Test
+	P-value < .0001
+
+1 or 2 transversion rates
+	Null model = TrN
+	Alternative model = TIM
+	2(lnL1-lnL0) = 273.8123510100413	df = 1
+Using Chi-Squared Test
+	P-value < .0001
+
+2 or 4 transversion rates
+	Null model = TIM
+	Alternative model = GTR
+	2(lnL1-lnL0) = 1300.459010579856	df = 2
+Using Chi-Squared Test
+	P-value < .0001
+
+Equal rates among sites
+	Null model = GTR
+	Alternative model = GTR+G
+	2(lnL1-lnL0) = 1.0539431339129806	df = 1
+Using mixed Chi-Squared Test
+	P-value = 0.07327080623323246
+
+No invariable sites
+	Null model = GTR
+	Alternative model = GTR+I
+	2(lnL1-lnL0) = 17369.065887636156	df = 1
+Using mixed Chi-Squared Test
+	P-value < .0001
+
+Model Selected: GTR+I
+-lnL: 460261.37547008647
+Substitution Model (with Rate Distribution):
+Model of substitution: GTR (Lanave et al. 1984)
+Parameter a: 1.51
+Parameter b: 3.14
+Parameter c: 1.73
+Parameter d: 1.03
+Parameter e: 4.19
+                                   A  C  G  T
+Corresponding rate matrix      ----------------
+(shown without frequencies):     A    a  b  c
+                                 C       d  e
+                                 G          1
+
+Nucleotide frequencies:
+pi(A) = 0.27569
+pi(C) = 0.18914
+pi(G) = 0.21834
+pi(T) = 0.31683
+
+Expected transition/transversion ratio: 1.29
+Expected pyrimidine transition/purine transition ratio: 1.33
+
+Model of rate heterogeneity: Invariable sites model
+Number of rate categories: 2
+Fraction of invariable sites: 0.14
+
+Relative rates and their probabilities:
+
+    Rate      Probability
+1   0.00000   0.14043
+2   1.16337   0.85957
+
+
+****Akaike Information Criterion 1 (AIC1)****
+
+Model Selected: GTR+I
+-lnL = 460261.37547008647
+k = 128 (Branch lengths included as model parameters)
+AIC1 = 920778.7509401729
+
+Substitution Model (with Rate Distribution):
+Model of substitution: GTR (Lanave et al. 1984)
+Parameter a: 1.51
+Parameter b: 3.14
+Parameter c: 1.73
+Parameter d: 1.03
+Parameter e: 4.19
+                                   A  C  G  T
+Corresponding rate matrix      ----------------
+(shown without frequencies):     A    a  b  c
+                                 C       d  e
+                                 G          1
+
+Nucleotide frequencies:
+pi(A) = 0.27569
+pi(C) = 0.18914
+pi(G) = 0.21834
+pi(T) = 0.31683
+
+Expected transition/transversion ratio: 1.29
+Expected pyrimidine transition/purine transition ratio: 1.33
+
+Model of rate heterogeneity: Invariable sites model
+Number of rate categories: 2
+Fraction of invariable sites: 0.14
+
+Relative rates and their probabilities:
+
+    Rate      Probability
+1   0.00000   0.14043
+2   1.16337   0.85957
+
+
+****Akaike Information Criterion 2 (AIC2)****
+
+Model Selected: GTR+I
+-lnL = 460261.37547008647
+k = 128 (Branch lengths included as model parameters)
+AIC2 = 921162.7509401729
+
+Substitution Model (with Rate Distribution):
+Model of substitution: GTR (Lanave et al. 1984)
+Parameter a: 1.51
+Parameter b: 3.14
+Parameter c: 1.73
+Parameter d: 1.03
+Parameter e: 4.19
+                                   A  C  G  T
+Corresponding rate matrix      ----------------
+(shown without frequencies):     A    a  b  c
+                                 C       d  e
+                                 G          1
+
+Nucleotide frequencies:
+pi(A) = 0.27569
+pi(C) = 0.18914
+pi(G) = 0.21834
+pi(T) = 0.31683
+
+Expected transition/transversion ratio: 1.29
+Expected pyrimidine transition/purine transition ratio: 1.33
+
+Model of rate heterogeneity: Invariable sites model
+Number of rate categories: 2
+Fraction of invariable sites: 0.14
+
+Relative rates and their probabilities:
+
+    Rate      Probability
+1   0.00000   0.14043
+2   1.16337   0.85957
+
+
+****Bayesian Information Criterion (BIC)****
+
+Model Selected: GTR+I
+-lnL = 460261.37547008647
+k = 128 (Branch lengths included as model parameters)
+BIC = 921880.7829392941
+
+Substitution Model (with Rate Distribution):
+Model of substitution: GTR (Lanave et al. 1984)
+Parameter a: 1.51
+Parameter b: 3.14
+Parameter c: 1.73
+Parameter d: 1.03
+Parameter e: 4.19
+                                   A  C  G  T
+Corresponding rate matrix      ----------------
+(shown without frequencies):     A    a  b  c
+                                 C       d  e
+                                 G          1
+
+Nucleotide frequencies:
+pi(A) = 0.27569
+pi(C) = 0.18914
+pi(G) = 0.21834
+pi(T) = 0.31683
+
+Expected transition/transversion ratio: 1.29
+Expected pyrimidine transition/purine transition ratio: 1.33
+
+Model of rate heterogeneity: Invariable sites model
+Number of rate categories: 2
+Fraction of invariable sites: 0.14
+
+Relative rates and their probabilities:
+
+    Rate      Probability
+1   0.00000   0.14043
+2   1.16337   0.85957
+
+
+Model-fit Ranking according to all measures
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	AIC1			Model		Ln			AIC2			Model		Ln			BIC			Model		Ln
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+0	920778.7509401729	GTR+I		-460261.37547008647	921162.7509401729	GTR+I		-460261.37547008647	921880.7829392941	GTR+I		-460261.37547008647	
+1	920780.6276544222	GTR+I+G		-460261.3138272111	921167.6276544222	GTR+I+G		-460261.3138272111	921891.2692785366	GTR+I+G		-460261.3138272111	
+2	921283.0296733357	TVM+I		-460514.51483666786	921664.0296733357	TVM+I		-460514.51483666786	922376.4520474637	TVM+I		-460514.51483666786	
+3	921285.0410624676	TVM+I+G		-460514.5205312338	921669.0410624676	TVM+I+G		-460514.5205312338	922387.0730615888	TVM+I+G		-460514.5205312338	
+4	921871.4972053985	TIM+I		-460809.74860269926	922249.4972053985	TIM+I		-460809.74860269926	922956.3099545335	TIM+I		-460809.74860269926	
+5	921873.4426464085	TIM+I+G		-460809.7213232042	922254.4426464085	TIM+I+G		-460809.7213232042	922966.8650205365	TIM+I+G		-460809.7213232042	
+6	922164.0222260205	TrN+I		-460957.01111301023	922539.0222260205	TrN+I		-460957.01111301023	923240.2253501622	TrN+I		-460957.01111301023	
+7	922166.0311265861	TrN+I+G		-460957.01556329307	922544.0311265861	TrN+I+G		-460957.01556329307	923250.8438757211	TrN+I+G		-460957.01556329307	
+8	922385.8890028981	K81uf+I		-461067.94450144906	922760.8890028981	K81uf+I		-461067.94450144906	923462.0921270399	K81uf+I		-461067.94450144906	
+9	922387.727923634	K81uf+I+G	-461067.863961817	922765.727923634	K81uf+I+G	-461067.863961817	923472.540672769	K81uf+I+G	-461067.863961817	
+10	922684.6572224945	HKY+I		-461218.32861124724	923056.6572224945	HKY+I		-461218.32861124724	923752.2507216431	HKY+I		-461218.32861124724	
+11	922686.6673184861	HKY+I+G		-461218.3336592431	923061.6673184861	HKY+I+G		-461218.3336592431	923762.8704426279	HKY+I+G		-461218.3336592431	
+12	925744.1973940765	SYM+I		-462747.09869703825	926119.1973940765	SYM+I		-462747.09869703825	926820.4005182183	SYM+I		-462747.09869703825	
+13	925745.8469589687	SYM+I+G		-462746.92347948434	926123.8469589687	SYM+I+G		-462746.92347948434	926830.6597081036	SYM+I+G		-462746.92347948434	
+14	926095.5012557438	TVMef+I		-462923.7506278719	926467.5012557438	TVMef+I		-462923.7506278719	927163.0947548924	TVMef+I		-462923.7506278719	
+15	926097.499320721	TVMef+I+G	-462923.7496603605	926472.499320721	TVMef+I+G	-462923.7496603605	927173.7024448628	TVMef+I+G	-462923.7496603605	
+16	928860.5109286859	TIMef+I		-464307.25546434295	929229.5109286859	TIMef+I		-464307.25546434295	929919.4948028415	TIMef+I		-464307.25546434295	
+17	928862.5116303533	TIMef+I+G	-464307.25581517664	929234.5116303533	TIMef+I+G	-464307.25581517664	929930.1051295019	TIMef+I+G	-464307.25581517664	
+18	929245.847085695	K81+I		-464500.9235428475	929611.847085695	K81+I		-464500.9235428475	930296.2213348574	K81+I		-464500.9235428475	
+19	929247.8470968109	K81+I+G		-464500.92354840547	929616.8470968109	K81+I+G		-464500.92354840547	930306.8309709665	K81+I+G		-464500.92354840547	
+20	929763.7150152549	TrNef+I		-464759.85750762746	930129.7150152549	TrNef+I		-464759.85750762746	930814.0892644173	TrNef+I		-464759.85750762746	
+21	929765.740652154	TrNef+I+G	-464759.870326077	930134.740652154	TrNef+I+G	-464759.870326077	930824.7245263095	TrNef+I+G	-464759.870326077	
+22	930158.9589461768	K80+I		-464958.4794730884	930521.9589461768	K80+I		-464958.4794730884	931200.723570346	K80+I		-464958.4794730884	
+23	930160.6930603547	K80+I+G		-464958.34653017734	930526.6930603547	K80+I+G		-464958.34653017734	931211.0673095171	K80+I+G		-464958.34653017734	
+24	938145.8168278091	GTR		-468945.90841390454	938526.8168278091	GTR		-468945.90841390454	939239.2392019371	GTR		-468945.90841390454	
+25	938146.7628846752	GTR+G		-468945.3814423376	938530.7628846752	GTR+G		-468945.3814423376	939248.7948837964	GTR+G		-468945.3814423376	
+26	938686.610363206	TVM		-469217.305181603	939064.610363206	TVM		-469217.305181603	939771.423112341	TVM		-469217.305181603	
+27	938688.1831339801	TVM+G		-469217.0915669901	939069.1831339801	TVM+G		-469217.0915669901	939781.6055081082	TVM+G		-469217.0915669901	
+28	939001.4268353154	F81+I		-469377.7134176577	939370.4268353154	F81+I		-469377.7134176577	940060.410709471	F81+I		-469377.7134176577	
+29	939003.4531093898	F81+I+G		-469377.7265546949	939375.4531093898	F81+I+G		-469377.7265546949	940071.0466085384	F81+I+G		-469377.7265546949	
+30	939442.275838389	TIM		-469596.1379191945	939817.275838389	TIM		-469596.1379191945	940518.4789625307	TIM		-469596.1379191945	
+31	939444.2926716505	TIM+G		-469596.14633582527	939822.2926716505	TIM+G		-469596.14633582527	940529.1054207855	TIM+G		-469596.14633582527	
+32	939714.088189399	TrN		-469733.0440946995	940086.088189399	TrN		-469733.0440946995	940781.6816885476	TrN		-469733.0440946995	
+33	939716.2282301474	TrN+G		-469733.1141150737	940091.2282301474	TrN+G		-469733.1141150737	940792.4313542892	TrN+G		-469733.1141150737	
+34	939985.4924452052	K81uf		-469868.7462226026	940357.4924452052	K81uf		-469868.7462226026	941053.0859443538	K81uf		-469868.7462226026	
+35	939987.5256116821	K81uf+G		-469868.76280584105	940362.5256116821	K81uf+G		-469868.76280584105	941063.7287358239	K81uf+G		-469868.76280584105	
+36	940266.3760383992	HKY		-470010.1880191996	940635.3760383992	HKY		-470010.1880191996	941325.3599125547	HKY		-470010.1880191996	
+37	940268.4918966842	HKY+G		-470010.2459483421	940640.4918966842	HKY+G		-470010.2459483421	941336.0853958328	HKY+G		-470010.2459483421	
+38	942722.6683360034	SYM		-471237.3341680017	943094.6683360034	SYM		-471237.3341680017	943790.261835152	SYM		-471237.3341680017	
+39	942723.9973197248	SYM+G		-471236.9986598624	943098.9973197248	SYM+G		-471236.9986598624	943800.2004438665	SYM+G		-471236.9986598624	
+40	943039.3756416128	TVMef		-471396.6878208064	943408.3756416128	TVMef		-471396.6878208064	944098.3595157684	TVMef		-471396.6878208064	
+41	943041.3756416128	TVMef+G		-471396.6878208064	943413.3756416128	TVMef+G		-471396.6878208064	944108.9691407614	TVMef+G		-471396.6878208064	
+42	943917.0332177795	JC+I		-471838.51660888974	944277.0332177795	JC+I		-471838.51660888974	944950.1882169556	JC+I		-471838.51660888974	
+43	943919.0604504076	JC+I+G		-471838.5302252038	944282.0604504076	JC+I+G		-471838.5302252038	944960.8250745768	JC+I+G		-471838.5302252038	
+44	945954.8562323988	TIMef		-472855.4281161994	946320.8562323988	TIMef		-472855.4281161994	947005.2304815612	TIMef		-472855.4281161994	
+45	945956.8562323988	TIMef+G		-472855.4281161994	946325.8562323988	TIMef+G		-472855.4281161994	947015.8401065543	TIMef+G		-472855.4281161994	
+46	946321.0021498128	K81		-473039.5010749064	946684.0021498128	K81		-473039.5010749064	947362.766773982	K81		-473039.5010749064	
+47	946323.0021498128	K81+G		-473039.5010749064	946689.0021498128	K81+G		-473039.5010749064	947373.3763989751	K81+G		-473039.5010749064	
+48	946812.830820032	TrNef		-473285.415410016	947175.830820032	TrNef		-473285.415410016	947854.5954442013	TrNef		-473285.415410016	
+49	946814.830820032	TrNef+G		-473285.415410016	947180.830820032	TrNef+G		-473285.415410016	947865.2050691944	TrNef+G		-473285.415410016	
+50	947185.8017685626	K80		-473472.9008842813	947545.8017685626	K80		-473472.9008842813	948218.9567677388	K80		-473472.9008842813	
+51	947187.8017685626	K80+G		-473472.9008842813	947550.8017685626	K80+G		-473472.9008842813	948229.5663927319	K80+G		-473472.9008842813	
+52	955703.0581804627	F81		-477729.52909023134	956069.0581804627	F81		-477729.52909023134	956753.4324296251	F81		-477729.52909023134	
+53	955705.0742802864	F81+G		-477729.5371401432	956074.0742802864	F81+G		-477729.5371401432	956764.058154442	F81+G		-477729.5371401432	
+54	960210.9483375766	JC		-479986.4741687883	960567.9483375766	JC		-479986.4741687883	961235.4937117596	JC		-479986.4741687883	
+55	960210.9483375766	JC		-479986.4741687883	960567.9483375766	JC		-479986.4741687883	961235.4937117596	JC		-479986.4741687883	
+56	960212.9483375766	JC+G		-479986.4741687883	960572.9483375766	JC+G		-479986.4741687883	961246.1033367527	JC+G		-479986.4741687883	
+
+Analysis took: 123 minutes 7 seconds

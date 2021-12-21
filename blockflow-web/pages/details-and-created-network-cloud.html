@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Forms &rsaquo; Form Validation &mdash; Stisla</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          
+        </form>
+      
+      </nav>
+      <div class="main-sidebar">
+          <div class="sidebar-brand">
+              <a href="index.html">Blockflow</a>
+            </div>
+            <div class="sidebar-brand sidebar-brand-sm">
+              <a href="index.html">Bf</a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-header">Network</li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Networks</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="pre-create-network.html">Create Networks</a></li>
+                    <li><a class="nav-link" href="networks-experiment-for-join.html">Networks for Join</a></li>
+                    <li><a class="nav-link" href="index-0.html">View/Get Provenance</a></li>
+                 
+                  </ul>
+                </li>
+               
+                
+                
+          </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Network Experiment Created</h1>
+            
+          </div>
+
+          <div class="section-body">
+
+              <div class="row">
+              <div class="col-12 col-sm-12 col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Network Components</h4>
+                    </div>
+                    <div class="card-body">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Peer</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">CA</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Orderer</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered" id="sortable-table">
+                                  <thead>
+                                  <tr>
+                                    <th scope="col">Peer</th>
+                                    <th scope="col">Organization</th>                                    
+                                    <th scope="col">Public IP</th>
+                                    <th scope="col">Private IP</th>
+                                    <th scope="col">Public DNS</th>
+                                    <th scope="col">Key private</th>
+                                    <th scope="col">Docker File</th>
+                                    <th scope="col">Configured</th>                                    
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Check the Configuration</th>
+                                                                 
+                                  </tr>
+                                </thead>
+                                <tbody class="ui-sortable">
+                                  </tbody>
+                              </table>
+                        </div>
+                      </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                          <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="sortable-table">
+                                <thead>
+                                  <tr>
+                                   
+                                    <th scope="col">CA</th>
+                                    <th scope="col">Organization</th>                                   
+                                    <th scope="col">Public IP</th>
+                                    <th scope="col">Private IP</th>
+                                    <th scope="col">Public DNS</th>
+                                    <th scope="col">Key private</th>
+                                    <th scope="col">Docker File</th>
+                                    <th scope="col">Configured</th>
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Check the Configuration</th>
+                                                                      
+                                  </tr>
+                                </thead>
+                                <tbody class="ui-sortable" id="cas">
+                                </tbody>
+                              </table>
+                        </div>
+
+                      </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                          <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="sortable-table">
+                                <thead>
+                                  <tr>
+                                   
+                                    <th scope="col">Orderer</th>                                   
+                                    <th scope="col">Network</th>
+                                    <th scope="col">Public IP</th>
+                                    <th scope="col">Private IP</th>
+                                    <th scope="col">Public DNS</th>
+                                    <th scope="col">Key private</th>
+                                    <th scope="col">Docker File</th>
+                                    <th scope="col">Configured</th>
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Check the Configuration</th>
+                                                                      
+                                  </tr>
+                                </thead>
+                                <tbody class="ui-sortable" id="orderer">
+                                </tbody>
+                              </table>
+                        </div>
+                       
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="createdconfinetwork" class='btn btn-primary'>CREATE CONFIGURATION OF NETWORK</button>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+
+          
+
+            
+            <!--<div class="row">
+                <div class="col-12 col-md-2 col-lg-2">
+                </div>
+
+                   
+              <div class="col-12 col-md-8 col-lg-8">
+                <div class="card">
+                  <form>
+                    <div class="card-header">
+                      <h4>Network Experiment</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="section-title">Network</div>
+
+                      <div class="form-group">
+
+                          <div class="row">
+                              <div class="col-2">
+                                  <img alt="image" src="../assets/img/avatar/blockchain_network.png" width='80' class="author-box-picture">
+                              </div>
+ 
+                           
+                            <div class="col-10">
+                               <div class="form-group">
+                        <label>Name Network Experiment</label>
+                        <input name="nameNetworkExperiment" id="nameNetworkExperiment" type="text" class="form-control" disabled >
+                      </div>
+                    </div>
+                      </div>                      
+                  
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea id="description" name="description" class="form-control" disabled></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dir Network</label>
+                        <textarea id="dirnetwork" name="dirnetwork" class="form-control" disabled></textarea>
+                      
+                      </div> 
+                      
+                      <div class="form-group">
+                        <button id="startnetwork"  class="btn btn-primary">Start Network</button>
+                        <button id="stopnetwork" class="btn btn-primary">Stop Network</button>
+                      </div> 
+
+                      <div class="section-title">Create Channel Configuration</div>
+
+                      <div class="form-group">
+
+                          <label>Channel Name</label>
+                          <input name="channelName" id="channelName" type="text" class="form-control" disabled>
+                        </div> 
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img alt="image" src="../assets/img/avatar/channel_network.png" width='70' class="author-box-picture">
+                                </div>
+
+                             
+                              <div class="col-10">
+                              <div class="form-group">
+                            <label>Config Channel Path</label>
+                            <input name="channelConfigPath" id="channelConfigPath" type="text" class="form-control" disabled>
+                          </div> 
+                        </div> 
+                      </div> 
+
+                        <div class="form-group">
+                              <button id="createchannel" class="btn btn-primary">Create Channel Configuration</button>
+                              
+                        </div> 
+
+
+                       
+                  </form>
+
+                  <div class="card-footer text-right">
+                    <button id="next" class="btn btn-primary">Next</button>
+                  </div>
+                </div>
+           
+              </div>-->
+            
+                  
+               
+            </div>
+          </div>
+        </section>
+
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Cloud Information for Peers</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                  <div class="form-group row mb-4">
+
+                      <label id="peerId" class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                      
+                  </div>
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Public</label>
+                      <div class="col-sm-12 col-md-6">
+                          <input name="ippublic" id="ippublic" type="text" class="form-control" required="">
+                      </div>
+                      <div>
+                          <div class="col-sm-12 col-md-3">
+                      <button type='button' id="savepublic" class='btn btn-primary'>Save</button>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Private</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input name="ipprivate" id="ipprivate" type="text" class="form-control" required="">
+                        </div>
+                        <div>
+                            <div class="col-sm-12 col-md-3">
+                        <button type='button' id="saveprivate" class='btn btn-primary'>Save</button>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Public DNS</label>
+                          <div class="col-sm-12 col-md-6">
+                              <input name="publicdns" id="publicdns" type="text" class="form-control" required="">
+                          </div>
+                          <div>
+                              <div class="col-sm-12 col-md-3">
+                          <button type='button' id="savepublicdns" class='btn btn-primary'>Save</button>
+                        </div>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group row mb-4">
+
+                        <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificate" enctype="multipart/form-data" id="cpa-form" >
+
+                          <input name="peerId2" id="peerId2" type="text" class="form-control">
+
+                         
+                            
+                          <div class=" form-group row mb-4">
+                           
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Key Private</label>
+                            
+                        <div class="custom-file col-sm-12 col-md-6">
+                            
+                          <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                          <label class="custom-file-label" for="customFile">Choice File</label>                          
+                        </div>
+
+                        <div class="col-sm-12 col-md-3">
+                            <button type='submit' id="save" class='btn btn-primary'>Save</button>
+                          </div>
+
+                      </div>
+
+                    </div>
+
+                    </form>
+
+                      
+                  
+                </select>
+              </div>
+              <div class="modal-footer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModalCenterCA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Cloud Information for CAs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                  <div class="form-group row mb-4">
+
+                      <label id="caId" class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                      
+                  </div>
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Public</label>
+                      <div class="col-sm-12 col-md-6">
+                          <input name="ippublicCA" id="ippublicCA" type="text" class="form-control" required="">
+                      </div>
+                      <div>
+                          <div class="col-sm-12 col-md-3">
+                      <button type='button' id="savepublicCA" class='btn btn-primary'>Save</button>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Private</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input name="ipPrivateCA" id="ipPrivateCA" type="text" class="form-control" required="">
+                        </div>
+                        <div>
+                            <div class="col-sm-12 col-md-3">
+                        <button type='button' id="saveprivateCA" class='btn btn-primary'>Save</button>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Public DNS</label>
+                          <div class="col-sm-12 col-md-6">
+                              <input name="publicdnsCA" id="publicdnsCA" type="text" class="form-control" required="">
+                          </div>
+                          <div>
+                              <div class="col-sm-12 col-md-3">
+                          <button type='button' id="savepublicdnsCA" class='btn btn-primary'>Save</button>
+                        </div>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group row mb-4">
+
+                        <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificateCA" enctype="multipart/form-data" id="cpa-form" >
+
+                          <input name="caId2" id="caId2" type="text" class="form-control">
+
+                         
+                            
+                          <div class=" form-group row mb-4">
+                           
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Key Private</label>
+                            
+                        <div class="custom-file col-sm-12 col-md-6">
+                            
+                          <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                          <label class="custom-file-label" for="customFile">Choice File</label>                          
+                        </div>
+
+                        <div class="col-sm-12 col-md-3">
+                            <button type='submit' id="save" class='btn btn-primary'>Save</button>
+                          </div>
+
+                      </div>
+
+                    </form>
+
+                    </div>
+
+                   
+
+                      
+                  
+                </select>
+              </div>
+              <div class="modal-footer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModalCenterOrderer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Cloud Information for Orderer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                  <div class="form-group row mb-4">
+
+                      <label id="ordererId" class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                      
+                  </div>
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Public</label>
+                      <div class="col-sm-12 col-md-6">
+                          <input name="ippublicOrderer" id="ippublicOrderer" type="text" class="form-control" required="">
+                      </div>
+                      <div>
+                          <div class="col-sm-12 col-md-3">
+                      <button type='button' id="savepublicOrderer" class='btn btn-primary'>Save</button>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">IP Private</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input name="ipPrivateOrderer" id="ipPrivateOrderer" type="text" class="form-control" required="">
+                        </div>
+                        <div>
+                            <div class="col-sm-12 col-md-3">
+                        <button type='button' id="saveprivateOrderer" class='btn btn-primary'>Save</button>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Public DNS</label>
+                          <div class="col-sm-12 col-md-6">
+                              <input name="publicdnsOrderer" id="publicdnsOrderer" type="text" class="form-control" required="">
+                          </div>
+                          <div>
+                              <div class="col-sm-12 col-md-3">
+                          <button type='button' id="savepublicdnsOrderer" class='btn btn-primary'>Save</button>
+                        </div>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group row mb-4">
+
+                        <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificateOrderer" enctype="multipart/form-data" id="cpa-form" >
+
+                          <input name="ordererId2" id="ordererId2" type="text" class="form-control">                        
+                            
+                          <div class=" form-group row mb-4">
+                           
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Key Private</label>
+                            
+                        <div class="custom-file col-sm-12 col-md-6">
+                            
+                          <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                          <label class="custom-file-label" for="customFile">Choice File</label>                          
+                        </div>
+
+                        <div class="col-sm-12 col-md-3">
+                            <button type='submit' id="save" class='btn btn-primary'>Save</button>
+                          </div>
+
+                      </div>
+
+                    </form>
+
+                    </div>
+
+                    
+
+                      
+                  
+                </select>
+              </div>
+              <div class="modal-footer">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+</body>
+
+<script>
+  $(document).ready(function(){
+
+  var url = window.location.href;
+
+  var n = url.search("=");
+
+  var idNetwork = url.substring(n+1);
+
+
+  
+
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/details/"+idNetwork,
+          method: 'GET',
+          success: function( network ) {
+
+              $('#nameNetworkExperiment').val(network.networkname);
+              $('#description').val(network.description);
+              $('#dirnetwork').val(network.dirnetwork);
+            
+              
+              
+           
+         }
+    });
+
+   
+   
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listPeerForAddNetwork/"+idNetwork,
+      method: 'GET',
+      success: function( peers ) {
+
+       
+
+        $.map(peers  , function( obj, i ) { 
+
+          $('#sortable-table').append("<tr>"                                  
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.configured+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='research(this.id)'  data-toggle='modal' data-target='#exampleModalCenter'>Update</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='peerChecked(this.id)'  >Check</button></td>"
+                 
+                  
+
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listCANetwork/"+idNetwork,
+      method: 'GET',
+      success: function( cas ) {
+
+       
+
+        $.map(cas  , function( obj, i ) { 
+
+          $('#cas').append("<tr>"                     
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.caname+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"'>"+obj.organization.organizationName+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.configured+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='ca(this.id)'  data-toggle='modal' data-target='#exampleModalCenterCA'>Update</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='caChecked(this.id)' >Check</button></td>"
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listOrdererNetwork/"+idNetwork,
+      method: 'GET',
+      success: function( orderer ) {
+
+       
+
+        $.map(orderer  , function( obj, i ) { 
+
+          $('#orderer').append("<tr>"                     
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.orderername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"'>"+obj.network.networkname+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.configured+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='orderer(this.id)'  data-toggle='modal' data-target='#exampleModalCenterOrderer'>Update</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='ordererChecked(this.id)' >Check</button></td>"
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+
+
+       
+
+
+
+ 
+
+    $("#next").click(function(){
+
+      event.preventDefault();        
+      var url  = window.location.href; 
+
+      var redirect = url.substring(0, url.lastIndexOf('/'))
+
+      window.location = redirect + 'add-research-experiment.html?networkid='+idNetwork;
+
+    
+    });  
+
+
+  
+    $("#savepublic").click(function(){
+
+     var peerId =  $('#peerId').text();
+   
+     var ipPublic =  $("#ippublic").val()
+
+      $.ajax({ 
+        url: "http://localhost:5000/api/network/ippublic?peerId="+peerId+"&ipPublic="+ipPublic,          
+        method: 'POST',            
+      
+        success: function( result ) {
+      
+        }
+      });
+
+    });
+
+
+      $("#saveprivate").click(function(){
+
+          var peerId =  $('#peerId').text();
+
+          var ipPrivate =  $("#ipprivate").val()
+
+            $.ajax({ 
+              url: "http://localhost:5000/api/network/ipprivate?peerId="+peerId+"&ipPrivate="+ipPrivate,          
+              method: 'POST',            
+            
+              success: function( result ) {
+            
+              }
+            });
+
+       });  
+
+
+      $("#savepublicdns").click(function(){
+
+          var peerId =  $('#peerId').text();
+
+          var publicdns =  $("#publicdns").val()
+
+
+          if (typeof publicdns !== 'undefined' && publicdns !== null && publicdns !== ''){
+         
+
+            $.ajax({ 
+              url: "http://localhost:5000/api/network/publicdns?peerId="+peerId+"&publicdns="+publicdns,          
+              method: 'POST',            
+            
+              success: function( result ) {
+            
+              }
+            });
+
+          }
+          
+
+       });  
+
+
+
+       $("#savepublicCA").click(function(){
+
+            var caId =  $('#caId').text();
+
+            var ipPublicCA =  $("#ippublicCA").val();
+
+          $.ajax({ 
+            url: "http://localhost:5000/api/network/ippublicca?caId="+caId+"&ippublicCA="+ipPublicCA,          
+            method: 'POST',            
+          
+            success: function( result ) {
+          
+            }
+          });
+
+      });
+
+
+ $("#saveprivateCA").click(function(){
+
+     var caId =  $('#caId').text();
+
+     var ipPrivateCA =  $("#ipPrivateCA").val()
+
+       $.ajax({ 
+         url: "http://localhost:5000/api/network/ipprivateca?caId="+caId+"&ipPrivateCA="+ipPrivateCA,          
+         method: 'POST',            
+       
+         success: function( result ) {
+       
+         }
+       });
+
+  });  
+
+
+ $("#savepublicdnsCA").click(function(){
+
+     var caId =  $('#caId').text();
+
+     var publicdnsCA =  $("#publicdnsCA").val()
+
+
+     if (typeof publicdnsCA !== 'undefined' && publicdnsCA !== null && publicdnsCA !== ''){
+    
+
+       $.ajax({ 
+         url: "http://localhost:5000/api/network/publicdnsca?caId="+caId+"&publicdnsCA="+publicdnsCA,          
+         method: 'POST',            
+       
+         success: function( result ) {
+       
+         }
+       });
+
+     }
+     
+
+  });  
+
+
+  $("#savepublicOrderer").click(function(){
+
+      var ordererId =  $('#ordererId').text();
+
+      var ipPublicOrderer =  $("#ippublicOrderer").val();
+
+      $.ajax({ 
+          url: "http://localhost:5000/api/network/ippublicorderer?ordererId="+ordererId+"&ipPublicOrderer="+ipPublicOrderer,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+
+  });
+
+
+  $("#saveprivateOrderer").click(function(){
+
+      var ordererId =  $('#ordererId').text();
+
+      var ipPrivateOrderer =  $("#ipPrivateOrderer").val();
+
+      alert(ipPrivateOrderer);
+
+      $.ajax({ 
+          url: "http://localhost:5000/api/network/ipprivateorderer?ordererId="+ordererId+"&ipPrivateOrderer="+ipPrivateOrderer,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+
+  });  
+
+
+  $("#savepublicdnsOrderer").click(function(){
+
+      var ordererId =  $('#ordererId').text();
+
+      var publicdnsOrderer =  $("#publicdnsOrderer").val()
+
+
+      if (typeof publicdnsOrderer !== 'undefined' && publicdnsOrderer !== null && publicdnsOrderer !== ''){
+
+
+      $.ajax({ 
+          url: "http://localhost:5000/api/network/publicdnsorderer?ordererId="+ordererId+"&publicdnsOrderer="+publicdnsOrderer,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+
+    }
+  }); 
+
+  $("#createdconfinetwork").click(function(){
+
+    alert(idNetwork);
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/createdconfignetwork/"+idNetwork,
+          method: 'POST',
+          success: function( network ) {
+
+            event.preventDefault();
+
+            var url  = window.location.href; 
+
+            var redirect = url.substring(0, url.lastIndexOf('/'))
+
+            window.location = redirect + 'network-start-cloud.html?networkid='+idNetwork;        
+           
+         }
+    });
+
+    
+
+
+  }); 
+
+  
+
+
+
+       
+    
+    
+  });
+
+  function research(i){
+    $('#peerId').text(i);
+
+    $('#peerId2').val(i);
+
+  }
+
+
+  function ca(i){
+    $('#caId').text(i);
+
+    $('#caId2').val(i);
+   
+  }
+
+  function orderer(i){
+    $('#ordererId').text(i);
+
+    $('#ordererId2').val(i);
+
+    
+  }
+
+  function peerChecked(i){
+
+    var peerId = i;
+    
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/chekedpeer?peerId="+peerId,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+    
+  }
+
+  function caChecked(i){
+
+    var caId = i;
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/chekedca?caId="+caId,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+  }
+
+  function ordererChecked(i){
+
+    var ordererId = i;
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/chekedorderer?ordererId="+ordererId,          
+          method: 'POST',            
+
+          success: function( result ) {
+
+          }
+      });
+  }
+
+
+ 
+  </script>
+</html>

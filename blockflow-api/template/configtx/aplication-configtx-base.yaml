@@ -1,0 +1,13 @@
+
+################################################################################
+#
+#   SECTION: Application
+#
+#   - This section defines the values to encode into a config transaction or
+#   genesis block for application related parameters
+#
+################################################################################
+Application: &ApplicationDefaults
+    # Organizations is the list of orgs which are defined as participants on
+    # the application side of the network
+    Organizations:

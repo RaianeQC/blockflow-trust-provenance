@@ -1,0 +1,51 @@
+
+
+    peernumber.orgname.com:
+        container_name: peernumber.orgname.com
+        image: hyperledger/fabric-peer
+        environment:         
+          - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+          - CORE_PEER_ID=peernumber.orgname.com
+          - CORE_LOGGING_PEER=debug
+          - CORE_CHAINCODE_LOGGING_LEVEL=DEBUG
+          - CORE_PEER_LOCALMSPID=orgnameMSP
+          - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/
+          - CORE_PEER_ADDRESS=peernumber.orgname.com:portnumber
+          - CORE_PEER_GOSSIP_BOOTSTRAP=peernumber.orgname.com:portnumber    
+          - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peernumber.orgname.com:portnumber
+          # # the following setting starts chaincode containers on the same
+          # # bridge network as the peers
+          # # https://docs.docker.com/compose/networking/
+          - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_default
+          - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdbname:portcouch
+          # The CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME and CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD
+          # provide the credentials for ledger to connect to CouchDB.  The username and password must
+          # match the username and password set for the associated CouchDB.
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+          - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+
+          - FABRIC_LOGGING_SPEC=DEBUG
+          - CORE_PEER_GOSSIP_USELEADERELECTION=true
+          - CORE_PEER_GOSSIP_ORGLEADER=false
+          - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
+          - CORE_PEER_TLS_ENABLED=true
+          - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/crypto/peer/tls/server.key
+          - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/crypto/peer/tls/server.crt
+          - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/crypto/peer/tls/ca.crt
+          
+        working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+        command: peer node start
+        # command: peer node start --peer-chaincodedev=true
+        ports:
+          - portnumber:portnumber
+          - portpeer2:portpeer2
+        volumes:
+            - /var/run/:/host/var/run/
+            - ./crypto-config/peerOrganizations/orgname.com/peers/peernumber.orgname.com/msp:/etc/hyperledger/msp/peer
+            - ./crypto-config/peerOrganizations/orgname.com/peers/peernumber.orgname.com/:/etc/hyperledger/crypto/peer           
+        depends_on:
+          - orderer.example.com
+          - couchdbname
+        networks:
+          - networkname

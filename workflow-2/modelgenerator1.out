@@ -1,0 +1,16 @@
+
+****Welcome to ModelGenerator v0.85****
+
+If you use ModelGenerator in your analysis, please cite:
+
+Thomas M Keane, Christopher J Creevey , Melissa M Pentony, Thomas J Naughton and James O McInerney (2006) Assessment of methods for amino acid matrix selection and their use on empirical data shows that ad hoc assumptions for choice of matrix are not justified, BMC Evolutionary Biology, 6:29
+
+http://www.biomedcentral.com/1471-2148/6/29
+
+Enter alignment file name: 
+Enter number of discrete gamma categories: 
+Input sequence file: /home/raiane/Documentos/sars-cov/corona/Trabalho/sequecias_align.fasta.phylip
+Format is PHYLIP INTERLEAVED
+Datatype is NUCLEOTIDE
+Error: Failed to read in alignment file: pal.alignment.AlignmentParseException: New sequence found after interleaved sequence - cound mean two sequences with same name (hCoV-19/Sh)
+Alignments must be in FASTA or Phylip/Clustal (sequential or interleaved) format

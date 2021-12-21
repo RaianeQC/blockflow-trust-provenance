@@ -1,0 +1,20 @@
+
+
+    ca.orgname.com:
+        image: hyperledger/fabric-ca
+        environment:
+          - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+          - FABRIC_CA_SERVER_CA_NAME=ca-orgname
+          - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.orgname.com.orgname.com-cert.pem
+          - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/keyorg
+          - FABRIC_CA_SERVER_TLS_ENABLED=true
+          - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.orgname.com.orgname.com-cert.pem
+          - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/keyorg
+        ports:
+          - "portca:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+        volumes:
+          - ./crypto-config/peerOrganizations/orgname.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.orgname.com
+        networks:
+          - networkname

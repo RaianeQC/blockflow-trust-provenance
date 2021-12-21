@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Components &rsaquo; Tab &mdash; Stisla</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+ <!-- CSS Libraries -->
+ <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+ <link rel="stylesheet" href="../node_modules/codemirror/theme/duotone-dark.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="main-wrapper">
+          <div class="navbar-bg"></div>
+          <nav class="navbar navbar-expand-lg main-navbar">
+            <form class="form-inline mr-auto">
+              <ul class="navbar-nav mr-3">
+                <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+              </ul>
+              
+            </form>
+          </nav>
+          <div class="main-sidebar">
+              <div class="sidebar-brand">
+                  <a href="index.html">Blockflow</a>
+                </div>
+                <div class="sidebar-brand sidebar-brand-sm">
+                  <a href="index.html">Bf</a>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-header">Network</li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Networks</span></a>
+                      <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="pre-create-network.html">Create Networks</a></li>
+                        <li><a class="nav-link" href="networks-experiment-for-join.html">Networks for Join</a></li>
+                        <li><a class="nav-link" href="index-0.html">View/Get Provenance</a></li>
+                     
+                      </ul>
+                    </li>   
+              </aside>
+          </div>
+
+          <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Cloud networking</h1>
+          </div>
+
+          <div class="card mb-0 ">
+              <div class="card-body">
+                  <div class="row">
+                  
+                      <ul class="nav nav-pills" id="myTab3" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active"  id="home-tab3" data-toggle="tab" href="#network" role="tab" aria-controls="home" aria-selected="false">NETWORK</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="profile-tab3" data-toggle="tab" href="#provenance" role="tab" aria-controls="profile" aria-selected="true">PROVENANCE</a>
+                          </li> 
+                          <li class="nav-item">
+                            <a class="nav-link" id="all-Provenance" data-toggle="tab" href="#allProvenance" role="tab" aria-controls="allProvenance" aria-selected="true">ALL PROVENANCE</a>
+                          </li>  
+                                               
+                      </ul>
+            </div>
+          </div>
+        </div>
+
+          <div class="section-body mt-3"> 
+            
+              
+
+           
+              <div class="col-12 col-sm-12 col-lg-12">
+                <div class="card author-box card-primary">                 
+                  <div class="card-body">
+                     
+
+
+                        <div class="tab-content" id="myTabContent2">
+                            <div class="tab-pane active show" id="network" role="tabpanel" aria-labelledby="home-tab3"> 
+                              
+            
+                                <div class="card author-box card-primary">
+                                                      
+                                    <div class="card-body">
+                                                    <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-2">
+                                      <ul class="nav nav-pills flex-column" id="myTab3" role="tablist">
+                                          <li class="nav-item">
+                                              <a class="nav-link active" id="profile-tab4" data-toggle="tab" href="#networkinformation" role="tab" aria-controls="profile" aria-selected="false">INFORMATION</a>
+                                            </li>                                        
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#networkelements" role="tab" aria-controls="profile" aria-selected="false">ELEMENTS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#createchannel" role="tab" aria-controls="contact" aria-selected="false">CREATE CHANNEL</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#createidentities" role="tab" aria-controls="contact" aria-selected="false">CREATE IDENTITIES</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#joinchannel" role="tab" aria-controls="contact" aria-selected="false">JOIN IN CHANNEL</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#installchaincode" role="tab" aria-controls="contact" aria-selected="false">INSTALL CHAINCODE</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#instantiatechaincode" role="tab" aria-controls="contact" aria-selected="false">INSTANTIATE CHAINCODE</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-10">
+                                      <div class="tab-content no-padding" id="myTab2Content">
+                                          <div class="tab-pane fade show active" id="networkinformation" role="tabpanel" aria-labelledby="contact-tab4">
+                                              <div class="row">
+                                                  <div class="col-12 col-sm-12 col-lg-12">
+                                                    <div class="card author-box card-primary">
+                                                      <div class="card-body">                  
+                                                        
+                                                          <div class="form-group">
+                                                              <div class="row">
+                                                                  <div class="col-2">
+                                                                      <img alt="image" src="../assets/img/avatar/blockchain_network.png" width='80' class="author-box-picture">
+                                                                  </div>
+                                                                  <div class="col-10">
+                                                                    <div class="form-group">
+                                                                      <label>Name Network Experiment</label>
+                                                                      <input name="nameNetworkExperiment" id="nameNetworkExperiment" type="text" class="form-control" disabled >
+                                                                    </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="form-group">
+                                                              <label>Description</label>
+                                                              <textarea id="description" name="description" class="form-control" disabled></textarea>
+                                                          </div>
+                                                          <div class="form-group">
+                                                              <label>Dir Network</label>
+                                                              <textarea id="dirnetwork" name="dirnetwork" class="form-control" disabled></textarea>                                    
+                                                          </div>
+                                                        
+                                                          </div>
+                                                        </div>
+                                                          
+                                                      </div>
+                                                      
+                                                    </div>
+                                                  
+                                                  </div>
+                                                                                                                         
+                                        
+                                        <div class="tab-pane fade  " id="networkelements" role="tabpanel" aria-labelledby="profile-tab4">                                        
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                    <div class="card author-box card-primary">
+                                                      
+                                                      <div class="card-body">
+                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                          <li class="nav-item">
+                                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Peer</a>
+                                                          </li>
+                                                          <li class="nav-item">
+                                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">CA</a>
+                                                          </li>
+                                                          <li class="nav-item">
+                                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Orderer</a>
+                                                          </li>
+                                                        </ul>
+                                                        <div class="tab-content" id="myTabContent">
+                                                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                              <div class="table-responsive">
+                                                                  <table class="table table-striped" id="sortable-table">
+                                                                    <thead>
+                                                                    <tr>
+                                                                      <th scope="col">Peer</th>
+                                                                      <th scope="col">Organization</th>                                    
+                                                                      <th scope="col">Public IP</th>
+                                                                      <th scope="col">Private IP</th>
+                                                                      <th scope="col">Public DNS</th>
+                                                                      <th scope="col">Key private</th>
+                                                                      <th scope="col">Docker File</th>
+                                                                      <th scope="col">Up</th>
+                                                                      <th scope="col">Start</th>                                    
+                                                                      
+                                                                                                   
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody class="ui-sortable">
+                                                                    </tbody>
+                                                                </table>
+                                                          </div>
+                                                        </div>
+                                                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                            <div class="table-responsive">
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                  <thead>
+                                                                    <tr>
+                                                                     
+                                                                      <th scope="col">CA</th>
+                                                                      <th scope="col">Organization</th>                                   
+                                                                      <th scope="col">Public IP</th>
+                                                                      <th scope="col">Private IP</th>
+                                                                      <th scope="col">Public DNS</th>
+                                                                      <th scope="col">Key private</th>
+                                                                      <th scope="col">Docker File</th>
+                                                                      <th scope="col">Up</th>
+                                                                      <th scope="col">Start</th>                                                        
+                                                                                                        
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody class="ui-sortable" id="cas">
+                                                                  </tbody>
+                                                                </table>
+                                                          </div>
+                                  
+                                                        </div>
+                                                          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                                            <div class="table-responsive">
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                  <thead>
+                                                                    <tr>
+                                                                     
+                                                                      <th scope="col">Orderer</th>                                   
+                                                                      <th scope="col">Network</th>
+                                                                      <th scope="col">Public IP</th>
+                                                                      <th scope="col">Private IP</th>
+                                                                      <th scope="col">Public DNS</th>
+                                                                      <th scope="col">Key private</th>
+                                                                      <th scope="col">Docker File</th>
+                                                                      <th scope="col">Up</th>
+                                                                      <th scope="col">Start</th>
+                                                                     
+                                                                                                        
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody class="ui-sortable" id="orderer">
+                                                                  </tbody>
+                                                                </table>
+                                                          </div>
+                                                         
+                                                          </div>
+                                                        </div>
+                                                      </div>                                                            
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="createchannel" role="tabpanel" aria-labelledby="contact-tab4">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                  <div class="card author-box card-primary">
+                                                    <div class="card-body">                  
+                                                      
+                                  
+                                                        <div class="">
+                                                        <div class="author-box-left">
+                                                            <img alt="image" src="../assets/img/avatar/channel_network.png" class="rounded-circle author-box-picture">
+                                                            <div class="clearfix"></div>
+                                                            <a href="#" class="btn btn-primary mt-3 " id="createchannel">Create</a>
+                                                          </div>
+                                  
+                                                          <div class="author-box-details">
+                                                              <div class="author-box-name">
+                                                                <a href="#">Create Channel</a>
+                                                              </div>
+                                                              
+                                                              <div class="author-box-description">
+                                                                <p>A Hyperledger Fabric channel is a private “subnet” of communication between two or more specific network members, for the purpose of conducting private and confidential transactions.</p>
+                                                              </div>                                              
+              
+                                                              <div class="form-group">
+                                        
+                                                                  <label>Channel Name</label>
+                                                                  <input name="channelName" id="channelName" type="text" class="form-control" disabled>
+                                                                  <label>Config Channel Path</label>
+                                                                  <input name="channelConfigPath" id="channelConfigPath" type="text" class="form-control" disabled>
+                                                                </div> 
+                                                                                         
+                                                          </div>
+                                                      
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                  </div>
+                                                
+                                                </div>
+                                        </div>
+                                        </div>
+                                      
+                                        <div class="tab-pane fade" id="createidentities" role="tabpanel" aria-labelledby="contact-tab4">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                  <div class="card author-box card-primary">
+                                                    <div class="card-body">                  
+                                                      
+                                  
+                                                        <div class="">
+                                                        <div class="author-box-left">
+                                                            <img alt="image" src="../assets/img/avatar/id-card.png" class="rounded-circle author-box-picture">
+                                                            <div class="clearfix"></div>
+                                                            <!--<a href="#" class="btn btn-primary mt-3 " id="createwallet">Create</a>-->
+                                                          </div>
+                                  
+                                                          <div class="author-box-details">
+                                                              <div class="author-box-name">
+                                                                <a href="#">ID</a>
+                                                              </div>
+                                                              
+                                                              <div class="author-box-description">
+                                                                <p>An application run by a user select identities when it connects to a channel. </p>
+                                                              </div>
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                <thead>
+                                                                <tr>
+                                                                  <th scope="col">Peer</th>
+                                                                  <th scope="col">Organization</th>                                    
+                                                                  <th scope="col">Create</th>                               
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="ui-sortable" id="peeridentity-table">
+                                                                </tbody>
+                                                            </table>
+                                                          </div>
+                                
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    
+                                                  </div>
+                                                
+                                                </div>
+                                        </div>
+                                      </div>
+                                        <div class="tab-pane fade" id="joinchannel" role="tabpanel" aria-labelledby="contact-tab4">
+              
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                  <div class="card author-box card-primary">
+                                                    <div class="card-body">                               <div class="">
+                                                        <div class="author-box-left">
+                                                            <img alt="image" src="../assets/img/avatar/channel_network.png" class="rounded-circle author-box-picture">
+                                                            <div class="clearfix"></div>
+                                                            <a href="#" class="btn btn-primary mt-3 " id="btninstall">Join</a>
+                                                          </div>                    
+                                                          <div class="author-box-details">
+                                                              <div class="author-box-name">
+                                                                <a href="#">Join Peer in Channel</a>
+                                                              </div>                                                
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                <thead>
+                                                                <tr>
+                                                                  <th scope="col">Peer</th>
+                                                                  <th scope="col">Organization</th>                                    
+                                                                  <th scope="col">Join</th>                               
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="ui-sortable" id="peerjoinchannel-table">
+                                                                </tbody>
+                                                            </table>
+                                                          </div>                                       
+                                                        </div>                                          
+                                                    </div>                                     
+                                                  </div>                                  
+                                                </div>
+                                              </div>                              
+                                        </div>
+                                     
+                                        <div class="tab-pane fade" id="installchaincode" role="tabpanel" aria-labelledby="contact-tab4">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                  <div class="card author-box card-primary">
+                                                    <div class="card-body">                               <div class="">
+                                                        <div class="author-box-left">
+                                                            <img alt="image" src="../assets/img/avatar/smart-contract.png" class="rounded-circle author-box-picture">
+                                                            <div class="clearfix"></div>
+                                                            <a href="#" class="btn btn-primary mt-3 " id="btninstall">Install</a>
+                                                          </div>                    
+                                                          <div class="author-box-details">
+                                                              <div class="author-box-name">
+                                                                <a href="#">Smart Contract Install</a>
+                                                              </div>                                                
+                                                              <div class="author-box-description">
+                                                                <p>A smart contract defines the different states of a business object and governs the processes that move the object between these different states. Smart contracts are important because they allow architects and smart contract developers to define the key business processes and data that are shared across the different organizations collaborating in a blockchain network.</p>
+                                                              </div>
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                <thead>
+                                                                <tr>
+                                                                  <th scope="col">Peer</th>
+                                                                  <th scope="col">Organization</th>                                    
+                                                                  <th scope="col">Create</th>                               
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="ui-sortable" id="peerinstallsmartcontract-table">
+                                                                </tbody>
+                                                            </table>
+                                                          </div>                                       
+                                                        </div>                                          
+                                                    </div>                                     
+                                                  </div>                                  
+                                                </div>
+                                              </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="instantiatechaincode" role="tabpanel" aria-labelledby="contact-tab4">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-12">
+                                                  <div class="card author-box card-primary">
+                                                    <div class="card-body">
+                                  
+                                                      
+                                  
+                                                        <div class="">
+                                                        <div class="author-box-left">
+                                                            <img alt="image" src="../assets/img/avatar/smart-contract.png" class="rounded-circle author-box-picture">
+                                                            <div class="clearfix"></div>
+                                                            <a href="#" class="btn btn-primary mt-3 " id="btninstantiate">Instantiate</a>
+                                  
+                                                          </div>
+                                  
+                                                          <div class="author-box-details">
+                                                              <div class="author-box-name">
+                                                                <a href="#">Smart Contract Instantiate</a>
+                                                              </div>
+                                                              
+                                                              <div class="author-box-description">
+                                                                <p>Smart Contracts are installed in peer and then need to be instantiated in channels, so that it can be invoked by applications connected to those channels.</p>
+                                                              </div>
+                                                              <table class="table table-striped table-bordered" id="sortable-table">
+                                                                <thead>
+                                                                <tr>
+                                                                  <th scope="col">Peer</th>
+                                                                  <th scope="col">Organization</th>                                    
+                                                                  <th scope="col">Create</th>                               
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="ui-sortable" id="peeriinstantiatesmartcontract-table">
+                                                                </tbody>
+                                                            </table>
+                                                          </div>
+
+                                                         
+                                                      
+                                                        </div>
+                                                        
+                                                    </div>
+                                  
+                                                   
+                                                  </div>
+                                                
+                                                </div>
+                                                
+                                                 
+                                                  </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="tab-pane fade " id="provenance" role="tabpanel" aria-labelledby="profile-tab3">
+
+                              <div class="card author-box card-primary">
+                                                      
+                                <div class="card-body">
+                                                <div class="row">
+                                <div class="col-12 col-sm-12 col-md-2">
+                                  <ul class="nav nav-pills flex-column" id="myTab3" role="tablist">
+                                      <li class="nav-item">
+                                          <a class="nav-link active" id="profile-tab4" data-toggle="tab" href="#workflowinformation" role="tab" aria-controls="profile" aria-selected="false">WORKFLOW</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#entitiesinformation" role="tab" aria-controls="profile" aria-selected="false">ENTITIES</a>
+                                        </li>                                        
+                                  </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-10">
+                                  <div class="tab-content no-padding" id="myTab2Content">
+                                      <div class="tab-pane fade show active" id="workflowinformation" role="tabpanel" aria-labelledby="contact-tab4">
+                                          <div class="row">
+                                              <div class="col-12 col-sm-12 col-lg-12">
+                                                <div class="card author-box card-primary">
+                                                  <div class="card-body">
+                                                    
+                                                    <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter'>ADD NEW WOKFLOW</button>
+                                                  
+                                                    <table class="table table-striped table-bordered mt-3" id="sortable-table">
+                                                      <thead>
+                                                      <tr>
+                                                        <th scope="col">Hash Blockchain ID</th>
+                                                        <th scope="col">Workflow</th>                                    
+                                                        <th scope="col">Description</th>
+                                                        <th scope="col">Activities/Tasks</th>
+                                                        <th scope="col">WasDerivedFrom</th>
+                                                        <th scope="col">View All Provenance</th>                    
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable" id="peeriinstantiatesmartcontract-table">
+                                                      <tr>
+                                                        <td class="col-3">
+                                                            <span class="text-primary"> 28b31185-db3a-4596-b5e9-562fd1aaf7ea </span>
+                                                        </td>
+                                                        <td class="col-2">
+                                                          <span>SciPhy_Workflow</span>
+                                                        </td>
+                                                        <td class="col-3">
+                                                          <span>Scientific workflow of phylogenetic analysis, SARS-CoV-2 </span>
+                                                        </td>
+                                                        <td class="col-2">
+                                                          <span>1) MSA Constuction,  
+                                                            2) MSA Format Conversion, 
+                                                            3) Evolutionary Model, 
+                                                            4) Phylogenetic Tree Construction</span>
+                                                        </td>
+                                                        <td class="col-3">
+                                                          <span> - </span>
+                                                        </td>
+                                                        <td class="col-1">
+                                                          <span> <button type='button' class='btn btn-primary'>View</button></td></span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td >
+                                                            <span class="text-primary"> 9-345221453033289b5763762199303328</span>
+                                                        </td>
+                                                        <td>
+                                                          <span>Vireport_Workflow</span>
+                                                        </td>
+                                                        <td>
+                                                          <span>Scientific workflow for phylogenetic analysis in viral sequences, SARS-CoV-2 </span>
+                                                        </td>
+                                                        <td>
+                                                          <span>1) Sequence Aligment,  
+                                                            2) Phylogenetic Inference, 
+                                                            3) Rooting, 
+                                                            4) Tree Dating</span>
+                                                        </td>
+                                                        <td>
+                                                          <span> - </span>
+                                                        </td>
+                                                        <td>
+                                                          <span> <button type='button' class='btn btn-primary'>View</button></td></span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td >
+                                                            <span class="text-primary"> b-21351116849639512627f24w963350</span>
+                                                        </td>
+                                                        <td>
+                                                          <span>SciPhy_Workflow</span>
+                                                        </td>
+                                                        <td>
+                                                          <span>Scientific workflow of phylogenetic analysis, SARS-CoV-2 </span>
+                                                        </td>
+                                                        <td>
+                                                          <span>1) MSA Constuction,  
+                                                            2) MSA Format Conversion, 
+                                                            3) Evolutionary Model, 
+                                                            4) Phylogenetic Tree Construction</span>
+                                                        </td>
+                                                        <td>
+                                                          <span> 28b31185-db3a-4596-b5e9-562fd1aaf7ea </span>
+                                                        </td>
+                                                        <td>
+                                                          <span> <button type='button' class='btn btn-primary'>View</button></td></span>
+                                                        </td>
+                                                      </tr>
+                                                      </tbody>
+                                                  </table>
+                                                      </div>
+                                                    </div>
+                                                      
+                                                  </div>
+                                                  
+                                                </div>
+                                              
+                                              </div>
+                                              <div class="tab-pane" id="entitiesinformation" role="tabpanel" aria-labelledby="contact-tab4">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-lg-12">
+                                                      <div class="card author-box card-primary">
+                                                        <div class="card-body">
+                                                          
+                                                          <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#addFile'>ADD ENTITIES</button>
+                                                        
+                                                          <table class="table table-striped table-bordered mt-3" id="sortable-table">
+                                                            <thead>
+                                                            <tr>
+                                                              <th scope="col">Hash Blockchain ID</th>                                                              
+                                                              <th scope="col">Hash</th>
+                                                              <th scope="col">Name</th>
+                                                              <th scope="col">Size File</th>
+                                                              <th scope="col">View</th>           
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody class="ui-sortable" id="peeriinstantiatesmartcontract-table">
+                                                            <tr>
+                                                              <td class="col-2">
+                                                                  <span class="text-primary"> 3-22149BV3642125759882654993638 </span>
+                                                              </td>
+                                                              <td class="col-2">
+                                                                <span>0D12C7EE86EBFB7E915FF635801BF18F</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> sequencias.fastas</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> 1,732,551 Bytes </span>
+                                                              </td>  
+                                                              <td class="col-1">
+                                                                <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#fileView'>VIEW</button>
+                                                              </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="col-2">
+                                                                  <span class="text-primary"> 3-22149BV3642125759882654993638 </span>
+                                                              </td>
+                                                              <td class="col-2">
+                                                                <span>EE1D2782A1646B72117D0AFA3D08FF7C</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span>sequencias_align.fasta</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> 2,517,152 Bytes</span>
+                                                              </td>  
+                                                              <td class="col-1">
+                                                                <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#fileView'>VIEW</button>
+                                                              </td>
+                                                            </tr>
+                                                          
+                                                            <tr>
+                                                              <td class="col-2">
+                                                                  <span class="text-primary"> 3-22149BV3642125759882654993638 </span>
+                                                              </td>
+                                                              <td class="col-2">
+                                                                <span>92BF4313A07FA37E1D68D5F2F4BEDBC7</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span>sequecias_align.fasta.phylip</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> 3,363,144 Bytes </span>
+                                                              </td>  
+                                                              <td class="col-1">
+                                                                <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#fileView'>VIEW</button>
+                                                              </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="col-2">
+                                                                  <span class="text-primary"> 3-22149BV3642125759882654993638 </span>
+                                                              </td>
+                                                              <td class="col-2">
+                                                                <span>20D49E029587BECD301222FB8DB1F5DA</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> EPI_ISL_402131</span>
+                                                              </td>
+                                                              <td class="col-3">
+                                                                <span> 60,308 Bytes </span>
+                                                              </td>  
+                                                              <td class="col-1">
+                                                                <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#fileView'>VIEW</button>
+                                                              </td>
+                                                            </tr>
+                                                          
+                                                            </tbody>
+                                                        </table>
+                                                            </div>
+                                                          </div>
+                                                            
+                                                        </div>
+                                                        
+                                                      </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                        </div>  
+                              
+                            </div>
+                            <div class="tab-pane fade" id="allProvenance" role="tabpanel" aria-labelledby="allProvenance">
+
+                              <div class="card author-box card-primary">
+                                                      
+                                <div class="card-body">
+                                                <div class="row">
+                                <div class="col-12 col-sm-12 col-md-2">
+                                  <ul class="nav nav-pills flex-column" id="myTab3" role="tablist">
+                                      <li class="nav-item">
+                                          <a class="nav-link active" id="profile-tab4" data-toggle="tab" href="#workflowinformation" role="tab" aria-controls="profile" aria-selected="false">QUERY</a>
+                                        </li>                                       
+                                  </ul>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-10">
+                                  <div class="tab-content no-padding" id="myTab2Content">
+                                      <div class="tab-pane fade show active" id="workflowinformation" role="tabpanel" aria-labelledby="contact-tab4">
+                                          <div class="row">
+                                              <div class="col-12 col-sm-12 col-lg-12">
+                                                <div class="card author-box card-primary">
+                                                  <div class="card-body">
+                                                    <div class="col-12 col-md-12 col-lg-12">
+                                                      <div id="accordion">
+                                                        <div class="accordion">
+                                                          <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-1" aria-expanded="true" style="color: white; background-color: #660066!important;">
+                                                            <h4>QUERY COMPONENT</h4>
+                                                          </div>
+                                                          <div class="accordion-body collapse show" id="panel-body-1" data-parent="#accordion">
+                                                            <div class="form-group">
+                                            
+                                                              <div class="row">                                                          
+                                                                <div class="col-12">
+                                                                  <div class="form-group">
+                                                                      <label>Choice Type Classes ProvONE </label>
+                                                                      <select class="form-control">
+                                                                        
+                                                                          <option>wasAssociatedwith</option>
+                                                                          <option>WasGenerationBy</option>
+                                                                          <option>Program</option>
+                                                                          <option>Program Execution</option>
+                                                                          <option>Entity</option>
+                                                                          <option>Port</option>
+                                                                          <option>hasInputPort</option>
+                                                                          <option>hasOutPort</option>
+                                                                        </select>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                  <div class="col-4">
+                                                                    <div class="form-group">
+                                                                      <label>Parameter ProvONE </label>
+                                                                      <select class="form-control">
+                                                                          <option>Agent</option>
+                                                                          <option>workflowID</option>
+                                                                          <option>workfloName</option>
+                                                                          <option>Program Execution</option>
+                                                                          <option>Entity</option>
+                                                                          <option>Port</option>
+                                                                          <option>hasInputPort</option>
+                                                                          <option>hasOutPort</option>
+                                                                        </select>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="col-4">
+                                                                    <div class="form-group">
+                                                                        <label>Operation</label>
+                                                                        <select class="form-control">
+                                                                            <option value="$eq">equals</option>
+                                                                            <option value="$gt">é igual aMaior que</option>
+                                                                            <option value="$gte">Maior que ou igual a</option>
+                                                                            <option value="$lt">Menor que</option>                                                      
+                                                                            <option value="$lte">Menor que ou igual a</option>
+                                                                        
+                                                                          </select>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="col-4">
+                                                                      <div class="form-group">
+                                                                          <label>Value</label>
+                                                                          <input name="numPeer" id="nPeer1" type="text" class="form-control" required="">
+                                                                      </div>
+                                                                  </div> 
+                                                                </div>
+                                                                <!--<div class="row">
+                                                                  <div class="col-4">
+                                                                    <div class="form-group">
+                                                                      <label>Operation </label>
+                                                                      <select class="form-control">
+                                                                          <option>and</option>
+                                                                          <option>plus</option>
+                                                                  
+                                                                        </select>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                  <div class="col-4">
+                                                                    <div class="form-group">
+                                                                      <label>Parameter ProvONE </label>
+                                                                      <select class="form-control">
+                                                                          <option>workflowID</option>
+                                                                          <option>workfloName</option>
+                                                                          <option>Program Execution</option>
+                                                                          <option>Entity</option>
+                                                                          <option>Port</option>
+                                                                          <option>hasInputPort</option>
+                                                                          <option>hasOutPort</option>
+                                                                        </select>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="col-4">
+                                                                    <div class="form-group">
+                                                                        <label>Operation</label>
+                                                                        <select class="form-control">
+                                                                            <option value="$eq">equals</option>
+                                                                            <option value="$gt">é igual aMaior que</option>
+                                                                            <option value="$gte">Maior que ou igual a</option>
+                                                                            <option value="$lt">Menor que</option>                                                      
+                                                                            <option value="$lte">Menor que ou igual a</option>
+                                                                        
+                                                                          </select>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="col-4">
+                                                                      <div class="form-group">
+                                                                          <label>Value</label>
+                                                                          <input name="numPeer" id="nPeer1" type="text" class="form-control" required="">
+                                                                      </div>
+                                                                  </div> 
+                                                                </div>-->
+                                                                <div class="form-group">
+
+                                                                  <button id="addorganization" class="btn btn-primary">Add new value in query</button>
+                                                                </div> 
+                                                                                                                               
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <label>Choice fields for view in query:</label>
+                                                              </div> 
+                                                              <div class="card author-box card-primary"> 
+                                                                                      
+                                                                <div class="card-body"> 
+                                                                                                                                   
+                                                                <div class="row">
+                                                                    <div class="form-group"></div>
+                                                                    <div class="col-2">   
+                                                                      <div class="form-group">                                                                                                                                                                                            
+                                                                        <input class="form-check-input" type="checkbox" id="IdProgram" name='organizationsChannel' value="">
+                                                                        <label for="IdProgram">IdProgram</label>
+                                                                      </div> 
+                                                                    </div> 
+                                                                    <div class="col-2">  
+                                                                      <div class="form-group">                                                                                                                          
+                                                                      <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                                      <label for="NameProgram">NameProgram</label>  
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="col-2">  
+                                                                    <div class="form-group">                                                                                                                          
+                                                                    <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                                    <label for="NameProgram">HasOutPort</label>  
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-2">  
+                                                                  <div class="form-group">                                                                                                                          
+                                                                  <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                                  <label for="NameProgram">HasInPort</label>  
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--<div class="row">
+                                                              <div class="form-group"></div>
+                                                              <div class="col-2">   
+                                                                <div class="form-group">                                                                                                                                                                                            
+                                                                  <input class="form-check-input" type="checkbox" id="IdProgram" name='organizationsChannel' value="">
+                                                                  <label for="IdProgram">IdWasGeneratedBy</label>
+                                                                </div> 
+                                                              </div> 
+                                                              <div class="col-2">  
+                                                                <div class="form-group">                                                                                                                          
+                                                                <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                                <label for="NameProgram">programExecutionId</label>  
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-2">  
+                                                              <div class="form-group">                                                                                                                          
+                                                              <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                              <label for="NameProgram">programExecutionName</label>  
+                                                            </div>
+                                                          </div>
+                                                          <div class="col-2">  
+                                                            <div class="form-group">                                                                                                                          
+                                                            <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                            <label for="NameProgram">idEntity</label>  
+                                                          </div>
+                                                        </div>
+                                                        <div class="col-2">  
+                                                          <div class="form-group">                                                                                                                          
+                                                          <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                          <label for="NameProgram">entityValue</label>  
+                                                        </div>
+                                                      </div>
+                                                      </div>-->
+
+                                                      <!--<div class="row">
+                                                        <div class="form-group"></div>
+                                                        <div class="col-2">   
+                                                          <div class="form-group">                                                                                                                                                                                            
+                                                            <input class="form-check-input" type="checkbox" id="IdProgram" name='organizationsChannel' value="">
+                                                            <label for="IdProgram">agent</label>
+                                                          </div> 
+                                                        </div> 
+                                                        <div class="col-2">  
+                                                          <div class="form-group">                                                                                                                          
+                                                          <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                          <label for="NameProgram">idAgent</label>  
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-2">  
+                                                        <div class="form-group">                                                                                                                          
+                                                        <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                        <label for="NameProgram">programExecutionName</label>  
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-2">  
+                                                      <div class="form-group">                                                                                                                          
+                                                      <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                      <label for="NameProgram">idProgramExecution</label>  
+                                                    </div>
+                                                  </div>
+                                                </div>-->
+                                                <!--<div class="row">
+                                                  <div class="form-group"></div>
+                                                  <div class="col-2">   
+                                                    <div class="form-group">                                                                                                                                                                                            
+                                                      <input class="form-check-input" type="checkbox" id="IdProgram" name='organizationsChannel' value="">
+                                                      <label for="IdProgram">programExecutionId</label>
+                                                    </div> 
+                                                  </div> 
+                                                <div class="col-2">  
+                                                  <div class="form-group">                                                                                                                          
+                                                  <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                  <label for="NameProgram">programExecutionName</label>  
+                                                </div>
+                                              </div>
+                                              <div class="col-2">  
+                                                <div class="form-group">                                                                                                                          
+                                                <input class="form-check-input" type="checkbox" id="NameProgram" name='organizationsChannel' value="">
+                                                <label for="NameProgram">startTime</label>  
+                                              </div>
+                                            </div>-->
+                                          </div>
+                                                            </div>
+                                                          </div>                                                          
+                                                        </div>  
+                                                                                                                    
+                                                      </div>
+                                                          </div>
+                                                          <div class="accordion">
+                                                            <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-2" style="color: white; background-color: #660066!important;">
+                                                              <h4>QUERY COUCHDB</h4>
+                                                            </div>
+                                                            <div class="accordion-body collapse show" id="panel-body-2" data-parent="#accordion">
+                                                              <div class="col-sm-6 col-md-12">                                                                                                  
+                                                                <textarea class="form-control codeeditor" name="google_analytics_code" ></textarea>
+                                                              </div>
+                                                            </div>
+                                                          </div>  
+                                                        </div>
+                                                         
+                                                        
+                                                    </div>
+                                                    <div class="row">
+                                                      <div class="col-12 col-sm-12 col-lg-12">
+                                                          <div class="card author-box card-primary">                                                       
+            
+                                                            <div class="card-body">
+                                                              <ul class="nav nav-tabs" id="myTabb" role="tablistt">
+                                                                <li class="nav-item">
+                                                                  <a class="nav-link active" id="home-tabb" data-toggle="tab" href="#homee" role="tab" aria-controls="homee" aria-selected="true">View Table</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                  <a class="nav-link" id="profile-tabb" data-toggle="tab" href="#profilee" role="tab" aria-controls="profilee" aria-selected="false">View JSON</a>
+                                                                </li>
+                                                              </ul>
+                                                              <div class="tab-content" id="myTabContent">
+                                                                <div class="tab-pane fade show active" id="homee" role="tabpanel" aria-labelledby="home-tabb">
+                                                                  <div class="table-responsive">
+                                                                    <table class="table table-striped" id="sortable-table">
+                                                                      <thead>
+                                                                        <tr>
+                                                                          <th class="text-center">
+                                                                            <i class="fas fa-th"></i>
+                                                                          </th>
+                                                                          <th>ID</th>
+                                                                          <th>Key</th>
+                                                                          <!--<th>Time Stamp</th>
+                                                                          <th>Research</th>  -->                            
+                                                                          <th>View</th>
+                                                                        </tr>
+                                                                      </thead>
+                                                                      <tbody class="ui-sortable">
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" > 10891257-g6bgc-1130-cvbb-312cs4563217	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  1-f56b43396a22097210d757e12a19ca9e </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  1765uuio-868cn-c2v7-ebt9-81534936nmvh	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  1-564e3t39622d0972r1075g7se12y199e </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                          
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  	11991397-gh608-dr46-6cv2-12611624qasy	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary"> 9-75398klm451932g7091509n4y331e561</span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                             
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  	127787u5-364cv-1482-753w-1637m4hw9sti	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  3-7698010s351213n37244509b2883b891 </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                              
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  331982cv-1309p-1767-dc4d-443e667209c5	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  5-640180510c5739682452p758o8527584 </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                              
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  1807w190-56719-63mw-wsef-b7g8fvcdwspo	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  0-91254a1770431440a471884316937915 </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                             
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                <div class="sort-handler ui-sortable-handle">
+                                                                                  <i class="fas fa-th"></i>
+                                                                                </div>
+                                                                              </td>
+                                                                              <td><span class="text-primary" >  	16774736-d2119-0plo-qwsa-nvc1653938cx8	</span></td>
+                                                                              <td >
+                                                                                  <span class="text-primary">  8-952176c5266341592387583791591635 </span>
+                                                                              </td>
+                                                                             
+                                                                              <!--<td>2018-01-20</td>
+                                                                              <td><span>Raiane</span></td>-->
+                                                                              
+                                                                              <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                            </tr>
+                                                                        <tr>
+                                                                          <td>
+                                                                            <div class="sort-handler ui-sortable-handle">
+                                                                              <i class="fas fa-th"></i>
+                                                                            </div>
+                                                                          </td>
+                                                                          <td><span class="text-primary" >  	1963pl12-po52w-l527-0987-uplxolc00120e7	</span></td>
+                                                                          <td >
+                                                                              <span class="text-primary">  7-7948235897657319026191351490254f </span>
+                                                                          </td>
+                                                                         
+                                                                          <!--<td>2018-01-20</td>
+                                                                          <td><span>Raiane</span></td>-->
+                                                                          
+                                                                          <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                        </tr>
+                                            
+                                            
+                                                                        <tr>
+                                                                            <td>
+                                                                              <div class="sort-handler ui-sortable-handle">
+                                                                                <i class="fas fa-th"></i>
+                                                                              </div>
+                                                                            </td>
+                                                                            <td><span class="text-primary" > 1987cvwe-1400i-ulp1-44rd-129cop1672cse6</span></td>
+                                                                            <td >
+                                                                                <span class="text-primary">  2-731276780146815973165410b835153r</span>
+                                                                            </td>
+                                                                           
+                                                                           
+                                                                 
+                                                                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                          </tr>
+                                            
+                                                                          <tr>
+                                                                            <td>
+                                                                              <div class="sort-handler ui-sortable-handle">
+                                                                                <i class="fas fa-th"></i>
+                                                                              </div>
+                                                                            </td>
+                                                                            <td><span class="text-primary" > 0rfg000d-pldgb-133f-273c-16628731151d97</span></td>
+                                                                            <td >
+                                                                                <span class="text-primary">  4-371491199497722976086912f369416d </span>
+                                                                            </td>
+                                                                           
+                                                                            <!--<td>2018-01-20</td>-->                               
+                                                                            
+                                                                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                                                          </tr>
+                                            
+                                                                          
+                                                                        
+                                                                      </tbody>
+                                                                    </table>
+                                                                </div>
+                                                              </div>
+                                                                <div class="tab-pane fade" id="profilee" role="tabpanel" aria-labelledby="profile-tabb">
+                                                                  <div class="form-group row">
+                
+                                                                    <div class="col-sm-6 col-md-12 ">
+                                                                      <textarea class="form-control codeeditor" name="google_analytics_code"></textarea>
+                                                                    </div>
+                                                                  </div> 
+                                                                  <div class="form-group">
+
+                                                                    <button id="addorganization" class="btn btn-primary">Download Json</button>
+                                                                  </div>                                       
+                                                              </div>
+                                      
+                                                            </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>                                                            
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                              </div>
+                                            </div>       
+                                      </div>
+                        
+                            </div>
+                              </div>
+
+                              
+                
+                              
+                              </div>
+
+                    
+                            </div>
+                          </div>
+                         
+                            </div>
+                           
+                          </div>                        
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Workflow</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificateOrderer" enctype="multipart/form-data" id="cpa-form" >
+
+                    <div class="form-group">
+                      <label>Name Workflow</label>
+                      <input name="nameWorkflow" id="nameWorkflow" type="text" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea id="description" name="description" class="form-control" ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Activities/Tasks</label>
+                      <textarea id="activiesTasks" name="activiesTasks" class="form-control" ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>wasDerivedFrom</label>
+                      <input name="wasDerivedFrom" id="wasDerivedFrom" type="text" class="form-control" required="">
+                    </div>
+              </form>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type='button' id="addResearch" class='btn btn-primary'>Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="addFile" tabindex="-1" role="dialog" aria-labelledby="addFile" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">File Inputs and Output Workflow</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificateOrderer" enctype="multipart/form-data" id="cpa-form" >
+
+                    <div class="form-group">
+                      <label>Workflow</label>
+                      <input name="nameWorkflow" id="nameWorkflow" type="text" class="form-control" required="">
+                    </div> 
+                    <div class="form-group">
+                      <label>Activity/Task</label>
+                      <input name="nameWorkflow" id="nameWorkflow" type="text" class="form-control" required="">
+                    </div> 
+                    <div class="form-group">
+                      <label>Type</label>
+                      <input name="nameWorkflow" id="nameWorkflow" type="text" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea id="description" name="description" class="form-control" ></textarea>
+                    </div>
+                    <div class="custom-file col-sm-12 col-md-6">
+                      <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                      <label class="custom-file-label" for="customFile">Choice File</label>                          
+                    </div>                        
+              </form>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type='button' id="addResearch" class='btn btn-primary'>Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="fileView" tabindex="-1" role="dialog" aria-labelledby="view" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">File Inputs and Output Workflow</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form method="POST" action="http://localhost:5000/api/network/uploadFileKeyCertificateOrderer" enctype="multipart/form-data" id="cpa-form" >
+
+                    <div class="form-group">
+                      <label>Workflow</label>
+                      <input name="nameWorkflow" id="nameWorkflow" value="SciPhy_Workflow" type="text" class="form-control" disabled="true">
+                    </div> 
+                    <div class="form-group">
+                      <label>Activity/Task</label>
+                      <input name="nameWorkflow" id="nameWorkflow" value='MSA' type="text" class="form-control" disabled="true">
+                    </div> 
+                    <div class="form-group">
+                      <label>Type</label>
+                      <input name="nameWorkflow" id="nameWorkflow" value='input' type="text" class="form-control" disabled="true">
+                    </div>
+                    <div class="form-group">
+                      <label>Data Creation</label>
+                      <input name="nameWorkflow" id="nameWorkflow" value="2021-03-10T13:25:12.321Z" type="text" class="form-control" disabled="true">
+                    </div>
+                    <div class="form-group">
+                      <label>Extension</label>
+                      <input name="nameWorkflow" id="nameWorkflow" value="FASTA" type="text" class="form-control" disabled="true">
+                    </div>
+                                           
+              </form>
+                    
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+      
+      </footer>
+    </div>
+  </div>
+
+<!-- General JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="../assets/js/stisla.js"></script>
+
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+</body>
+<script>
+  $(document).ready(function(){
+
+  var url = window.location.href;
+
+  var n = url.search("=");
+
+  var idNetwork = url.substring(n+1);
+
+
+    $.ajax({ 
+          url: "http://localhost:5000/api/network/details/"+idNetwork,
+          method: 'GET',
+          success: function( network ) {
+
+              $('#nameNetworkExperiment').val(network.networkname);
+              $('#description').val(network.description);
+              $('#dirnetwork').val(network.dirnetwork);
+              $('#channelConfigPath').val(network.channels.channelConfigPath);
+              $('#channelName').val(network.channels.channelName);
+              $('#channelConfigPath').val(network.channels.channelConfigPath);
+         }
+    });
+
+   
+   
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listPeerForAddNetwork/"+idNetwork,
+      method: 'GET',
+      success: function( peers ) {
+
+       
+
+        $.map(peers  , function( obj, i ) { 
+
+          $('#sortable-table').append("<tr>"                                  
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='upPeer(this.id)'>Up</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='commandCloud(this.id)'  data-toggle='modal' data-target='#exampleModalCenter'>Start</button></td>"
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listCANetwork/"+idNetwork,
+      method: 'GET',
+      success: function( cas ) {
+
+       
+
+        $.map(cas  , function( obj, i ) { 
+
+          $('#cas').append("<tr>"                     
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.caname+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"'>"+obj.organization.organizationName+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='upCA(this.id)' '>Up</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='commandCloudCA(this.id)'>Start</button></td>"
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listOrdererNetwork/"+idNetwork,
+      method: 'GET',
+      success: function( orderer ) {
+
+       
+
+        $.map(orderer  , function( obj, i ) { 
+
+          $('#orderer').append("<tr>"                     
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.orderername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"'>"+obj.network.networkname+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPublic"+i+"'>"+obj.ipPublic+"</span></td>"
+                  +"<td><span  class='text-primary' id='ipPrivate"+i+"'>"+obj.ipPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='publicDNS"+i+"'>"+obj.publicDNS+"</span></td>"
+                  +"<td><span  class='text-primary' id='keyPrivate"+i+"'>"+obj.keyPrivate+"</span></td>"
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.composeFileName+"</span></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='upOrderer(this.id)'  data-toggle='modal' data-target='#exampleModalCenter'>Up</button></td>"
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='commandCloudOrderer(this.id)'  data-toggle='modal' data-target='#exampleModalCenterOrderer'>Start</button></td>"
+                +"</tr>");
+           
+          
+        }); 
+     }
+});
+
+
+$.ajax({ 
+      url: "http://localhost:5000/api/network/listPeerForAddNetwork/"+idNetwork,
+      method: 'GET',
+      success: function( peers ) {
+
+       
+
+        $.map(peers  , function( obj, i ) { 
+
+          $('#peeridentity-table').append("<tr>"                                 
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='peeridentity(this.id)'  >Identity</button></td>"
+                +"</tr>");
+           
+
+          $('#peerjoinchannel-table').append("<tr>"                                 
+                  +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+                  +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+                  +"<td><button type='button' class='btn btn-primary' id='"+obj.peername+"' onclick='joinpeerchannel(this.id)'  >Join</button></td>"
+                +"</tr>");
+
+
+          $('#peerinstallsmartcontract-table').append("<tr>"                                 
+            +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+            +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+            +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='installSmartContract(this.id)'  >Install</button></td>"
+          +"</tr>");
+
+
+          $('#peeriinstantiatesmartcontract-table').append("<tr>"                                 
+            +"<td><span  class='text-primary' id='peer"+i+"'>"+obj.peername+"</span></td>"
+            +"<td><span  class='text-primary' id='org"+i+"' >"+obj.organization.organizationName+"</span></td>"                  
+            +"<td><button type='button' class='btn btn-primary' id='"+obj._id+"' onclick='instantiateSmartContract(this.id)'  >Instantiate</button></td>"
+          +"</tr>");
+
+
+                
+          
+        }); 
+     }
+});
+
+
+$('#createchannel').click(function(event){
+      event.preventDefault();
+        var dirnetwork = $('#dirnetwork').val();
+        var channelName = $('#channelName').val();
+        var channelConfigPath = $('#channelConfigPath').val();
+      
+      $.ajax({ 
+          url: "http://localhost:5000/api/channel/createchannel?dir="+dirnetwork+"&channelName="+channelName+"&channelConfigPath="+channelConfigPath,
+          method: 'POST',
+          success: function( network ) {
+
+         }
+      });
+      
+      
+    });
+
+
+$("#btninstantiate").click(function(){
+        event.preventDefault();
+        $.ajax({ 
+          url: "http://localhost:5000/api/smartcontract/instantiate/"+peerid,          
+          method: 'POST',            
+          success: function( result ) {
+        
+          }
+        });
+
+});
+
+});
+
+function joinpeerchannel(peerName){
+
+  var dirnetwork = $('#dirnetwork').val();
+  var channelName = $('#channelName').val();
+ 
+  $.ajax({ 
+      url: "http://localhost:5000/api/channel/joinnetworkchannel?dirnetwork="+dirnetwork+"&channelName="+channelName+"&peerName="+peerName,
+      method: 'POST',
+      success: function( network ) {
+
+    }
+  });
+}
+
+function peeridentity(peerid){
+
+alert(peerid);
+
+  $.ajax({ 
+      url: "http://localhost:5000/api/identity/createIdentity/"+peerid,
+      method: 'POST',
+      success: function( network ) {
+
+    }
+  });
+}
+
+function upPeer(peerid){
+
+  alert(peerid)
+
+  $.ajax({ 
+      url: "http://localhost:5000/api/network/upPeer/"+peerid,
+      method: 'POST',
+      success: function( network ) {
+        console.log(network)
+
+    }
+  });
+
+}
+
+function commandCloud(peerid){
+
+alert(peerid)
+
+  $.ajax({ 
+      url: "http://localhost:5000/api/network/commandCloud/"+peerid,
+      method: 'POST',
+      success: function( network ) {
+        console.log(network)
+
+    }
+  });
+
+}
+
+
+function upOrderer(ordererid){
+
+alert(ordererid)
+
+$.ajax({ 
+    url: "http://localhost:5000/api/network/upOrderer/"+ordererid,
+    method: 'POST',
+    success: function( network ) {
+      console.log(network)
+
+  }
+});
+
+}
+
+function commandCloudOrderer(ordererid){
+
+alert(ordererid)
+
+$.ajax({ 
+    url: "http://localhost:5000/api/network/commandCloudOrderer/"+ordererid,
+    method: 'POST',
+    success: function( network ) {
+      console.log(network)
+
+  }
+});
+
+}
+
+
+function upCA(caid){
+
+alert(caid)
+
+$.ajax({ 
+    url: "http://localhost:5000/api/network/upCA/"+caid,
+    method: 'POST',
+    success: function( network ) {
+      console.log(network)
+
+  }
+});
+
+}
+
+function commandCloudCA(caid){
+
+alert(caid)
+
+$.ajax({ 
+    url: "http://localhost:5000/api/network/commandCloudCA/"+caid,
+    method: 'POST',
+    success: function( network ) {
+      console.log(network)
+
+  }
+});
+
+}
+
+function installSmartContract(peerid){
+
+alert(peerid);
+
+$.ajax({ 
+  url: "http://localhost:5000/api/smartcontract/install/"+peerid,          
+  method: 'POST',            
+
+  success: function( result ) {
+
+  }
+});
+}
+
+function instantiateSmartContract(peerid){
+
+alert(peerid);
+
+$.ajax({ 
+          url: "http://localhost:5000/api/smartcontract/instantiate/"+peerid,          
+          method: 'POST',            
+          success: function( result ) {
+        
+          }
+        });
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
